@@ -1,0 +1,26 @@
+/****************************************************************
+                                                                *
+                            MAIN STYLING                        *                        
+                                                                *
+*****************************************************************/
+:root {
+  --color-main-text: #1B1B1B;
+  --white-primary-color: #FFFFFF;
+  --web-orange-primary-color: #F7A100;
+  --regent-blue-primary-color: #E6F2F7;
+  --lochmara-primary-color: #0071B3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: var(--color-main-text);
+}
+
