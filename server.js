@@ -2,25 +2,7 @@
 import express from 'express'
 // Importeerd de zelfgemaakte functie fetchJson uit de ./helpers map
 import fetchJson from './helpers/fetch-json.js'
-import BeoordelingData from "ejs/ejs.js";
 
-
-const articleUrl = 'https://api.mobile.bnr.nl/v1/articles';
-
-async function getArticles() {
-    try {
-        const articles = await fetchJson(articleUrl);
-        console.log(articles);  // The fetched articles data in JSON format
-    } catch (error) {
-        console.error('Failed to fetch articles:', error);
-    }
-}
-
-getArticles();
-
-const audioUrl = await fetchJson(`http://25683.live.streamtheworld.com/BNR_BUSINESS_BEATS.mp3`)
-console.log(articleUrl)
-// hier maak ik een nieuwe express app aan
 
 
 const app = express()
@@ -38,26 +20,59 @@ app.use(express.urlencoded({extended: true}))
 
 
 
-app.get('/',  function (request, response) {
 
+app.get('/', (request, response) => {
+    fetchJson('https://api.mobile.bnr.nl/v1/articles')
+        .then(articles => {
+            console.log('Fetched articles:', articles);
 
-    // You can access individual articles or properties here (optional)
-    articleUrl.forEach(article => {
-        console.log(`Article ID: ${article.id}`);
-        console.log(`Article Title: ${article.title}`); // Assuming 'title' is a property
-        // Access other properties as needed
-    });
+            articles.forEach(article => {
+                console.log(`Article ID: ${article.id}`); // Assuming 'id' is a property
+                console.log(`Article Title: ${article.title}`);  // Assuming 'title' is a property
+                // Access other properties as needed
+            });
 
-    fetchJson(`https://api.mobile.bnr.nl/v1/articles`).then((BeoordelingData) => {
-        console.log(BeoordelingData[0].id)
-        console.log(BeoordelingData.id[1])
-
-        response.render('index', {
-            articles: BeoordelingData.title,
+            response.render('index', {
+                articles,
+            });
         })
-        // console.log(ratings)
-    })
+        .catch(error => {
+            console.error('Failed to fetch articles:', error);
+            // Handle error case (e.g., display an error message in the template)
+            return response.render('error', { message: 'Failed to fetch articles' });
+        });
 })
+
+// de audio is niet fetchbaar omdat het geen json is
+//
+// app.get('/', async (request, response) => {
+//     try {
+//         // Correct the audio URL (assuming it's a direct mp3 stream)
+//         const feedbackUrl = await fetchJson('https://api.mobile.bnr.nl/v1/articles');
+//         const audioUrl = await fetchJson('http://25683.live.streamtheworld.com/BNR_BUSINESS_ BEATS.mp3'); // Remove the extra "s"
+//
+//         // Fetch articles and audio concurrently (assuming fetchJson resolves with data)
+//         const [articles, audio] = await Promise.all([feedbackUrl, audioUrl]);
+//
+//         console.log('Fetched articles:', articles);
+//         articles.forEach(article => {
+//             console.log(`Article ID: ${article.id}`); // Assuming 'id' is a property
+//             console.log(`Article Title: ${article.title}`);  // Assuming 'title' is a property
+//             // Access other properties as needed
+//         });
+//         console.log('Fetched audio:', audio);
+//
+//         // Assuming 'audio' contains the actual audio data (might need adjustments)
+//         response.render('index', {
+//             articles,
+//             audio,
+//         });
+//     } catch (error) {
+//         console.error('Failed to fetch data:', error);
+//         // Handle error case (e.g., display an error message in the template)
+//         return response.render('error', { message: 'Failed to fetch data' });
+//     }
+// })
 
 
 

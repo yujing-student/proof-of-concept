@@ -21,19 +21,18 @@
 
 
 export default async function fetchJson(url, payload = {}) {
-    // Add headers (if required by the BNR API)
+  // hier word een nieuwe const aangemaakt met de headers die nodig zijn voor de fetch omdat die hem anders waarschijnlijk niet accepteert
     const headers = new Headers({
-        'Accept': 'application/json',  // Specify JSON acceptance
-        // Add any other required headers (e.g., authorization token) based on BNR API documentation
+        'Accept': 'application/json',
     });
 
-    // Include headers in the payload
-    const newPayload = { ...payload, headers };
+    // hier word de url, payload en headers in een nieuwe const gezet en word er een fetch gedaan naar de url
+    const newPayload = { url,payload, headers };
 
     return await fetch(url, newPayload)
         .then((response) => response.json())
         .catch((error) => {
             console.error('Error fetching data:', error);
-            return error;  // Or return a custom error object with more details
+            return error;
         })
 }
