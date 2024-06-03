@@ -13,8 +13,27 @@
  * @param {object} [payload] the payload to send to the API
  * @returns the response from the API endpoint parsed as a json object
  */
+// export default async function fetchJson(url, payload = {}) {
+//     return await fetch(url, payload)
+//         .then((response) => response.json())
+//         .catch((error) => error)
+// }
+
+
 export default async function fetchJson(url, payload = {}) {
-    return await fetch(url, payload)
+    // Add headers (if required by the BNR API)
+    const headers = new Headers({
+        'Accept': 'application/json',  // Specify JSON acceptance
+        // Add any other required headers (e.g., authorization token) based on BNR API documentation
+    });
+
+    // Include headers in the payload
+    const newPayload = { ...payload, headers };
+
+    return await fetch(url, newPayload)
         .then((response) => response.json())
-        .catch((error) => error)
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+            return error;  // Or return a custom error object with more details
+        })
 }
