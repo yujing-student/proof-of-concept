@@ -4,11 +4,13 @@
                                                                 *
 *****************************************************************/
 :root {
-  --color-main-text: #1B1B1B;
-  --white-primary-color: #FFFFFF;
-  --web-orange-primary-color: #F7A100;
-  --regent-blue-primary-color: #E6F2F7;
-  --lochmara-primary-color: #0071B3;
+  --color-black: #000000;
+
+  --yellow:#ffd200;
+  --gray:#d7d2cb;
+  --gray40: rgba(215, 210, 203, 0.4);
+  --gray200: rgba(215, 210, 203, 0.2);
+
 }
 
 * {
@@ -17,10 +19,18 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: Jakarta Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://static.bnr.nl/assets/bnr-next/fonts/PlusJakartaSans-Bold.woff2) format("woff2")
+
+}
 body {
-  font-family: "Proxima Nova", sans-serif;
+  font-family: "plusJakarta", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
-  color: var(--color-main-text);
+  color: var(--color-black);
 }
 
