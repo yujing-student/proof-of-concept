@@ -25,7 +25,7 @@ app.get('/', (request, response) => {
             articles.forEach(article => {
                 // console.log(`Article ID: ${article.id}`); // Assuming 'id' is a property
                 // console.log(`Article Title: ${article.title}`);  // Assuming 'title' is a property
-                const firstTenArticles = article.slice(0, 10);
+                // const firstTenArticles = article.slice(0, 10);
                 // Access other properties as needed
             });
 
@@ -33,7 +33,7 @@ app.get('/', (request, response) => {
 
 
             response.render('index', {
-                firstTenArticles,
+                articles,
                 audioUrl,
             });
         })

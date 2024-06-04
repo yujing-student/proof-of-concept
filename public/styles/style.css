@@ -4,33 +4,73 @@
                                                                 *
 *****************************************************************/
 :root {
-  --color-black: #000000;
+    --color-black: #000000;
 
-  --yellow:#ffd200;
-  --gray:#d7d2cb;
-  --gray40: rgba(215, 210, 203, 0.4);
-  --gray200: rgba(215, 210, 203, 0.2);
+    --yellow: #ffd200;
+    --gray: #d7d2cb;
+    --gray40: rgba(215, 210, 203, 0.4);
+    --gray200: rgba(215, 210, 203, 0.2);
 
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
-  font-family: Jakarta Sans;
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://static.bnr.nl/assets/bnr-next/fonts/PlusJakartaSans-Bold.woff2) format("woff2")
+    font-family: Jakarta Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://static.bnr.nl/assets/bnr-next/fonts/PlusJakartaSans-Bold.woff2) format("woff2")
 
 }
+
 body {
-  font-family: "plusJakarta", sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
-  color: var(--color-black);
+    font-family: "plusJakarta", sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--color-black);
 }
 
+.playbutton {
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    content: "";
+    z-index: 1;
+    position: absolute;
+    animation: 1.8s ease-out 0s infinite normal none running pulse;
+    background: var(--yellow);
+}
+
+@keyframes pulse {
+    0% {
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+        width: 44px;
+        height: 44px;
+        opacity: 1;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 124, 223, 0) 0%,
+        rgba(0, 46, 223, 0) 61.46%, rgba(238, 160, 46, 0.5) 70.31%, #eea02e 100%);
+    }
+
+
+    60% {
+        top: calc(50% - 90px / 2);
+        left: calc(50% - 90px / 2);
+        width: 90px;
+        height: 90px;
+        opacity: 0;
+        background: radial-gradient(50% 50% at 50% 50%,
+        rgba(0, 124, 223, 0) 0%, rgba(0, 46, 223, 0) 61.46%,
+        rgba(253, 170, 54, 0.5) 70.31%, #007CDF 100%);
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
