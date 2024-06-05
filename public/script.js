@@ -5,6 +5,6 @@ const menu = document.querySelector("nav")
 document.addEventListener("DOMContentLoaded", (event) => {
     menuButton.addEventListener('click', function(){
         menu.classList.toggle('menu-opened')
-        document.documentElement.classList.add("no-scroll");
+        document.documentElement.classList.toggle("no-scroll");
     })
 });
