@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}))
 app.get('/', (request, response) => {
     fetchJson('https://api.mobile.bnr.nl/v1/articles')
         .then(articles => {
-            console.log('Fetched articles:', articles);
+            // console.log('Fetched articles:', articles);
             // http://25683.live.streamtheworld.com/BNR_BUSINESS_BEATS.mp3   link naar audio
             articles.forEach(article => {
                 // console.log(`Article ID: ${article.id}`); // Assuming 'id' is a property

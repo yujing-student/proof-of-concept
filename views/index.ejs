@@ -1,20 +1,35 @@
 <%- include('./partials/head') %>
 <%- include('./partials/navigation') %>
 <body>
-<main class="desktopSpacing">
-    <h1>Articles</h1>
-    <ul>
+<main class="">
+
+    <section class="listarticles">
+        <h1>Articles</h1>
         <% articles.forEach(article => { %>
-            <li>
+            <article>
                 <h2><%= article.title %></h2>
                 <p><%= article.introduction %></p>
                 <% if (article.photo) { %>
-                    <img src="<%= article.photo.URL %>" alt="Article Image">
+                    <img src="<%= article.photo.URL %>" alt="Article Image" class="article__img">
                 <% } %>
-            </li>
+
+                <picture>
+                    <source srcset="<%= article.photo.URL%>?width=400&height=300&fit=cover&format=avif"
+                            type="image/avif">
+
+                    <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=webp"
+                            type="image/webp">
+
+
+                    <img src="https://fdnd-agency.directus.app/assets/<%= article.photo.URL %>?width=400&height=300&fit=cover"
+                         alt="Image of the house" width="<%= article.photo.URLe %>"
+                         height=" <%= article.photo.URL %>" class="article__img"
+                    >
+                </picture>
+            </article>
         <% }) %>
 
-          </ul>
+
 
     <section>
         <h1>BNR beats business</h1>
@@ -23,7 +38,6 @@
             dit is de knop
         </button>
         <video controls="" autoplay="" name="media"><source src="http://25683.live.streamtheworld.com/BNR_BUSINESS_BEATS.mp3" type="audio/mpeg"></video>
-
 
     </section>
 
