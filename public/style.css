@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap');
+
+/* Custom properties */
+
+:root {
+/* ------ Spacing ------ */
+    --spacing: 1rem;
+    --section-spacing: ;
+    --heading-spacing: ;
+
+/* ------ Colors ------ */
+    --main-background: #1E1E1E;
+    --primary-light: white;
+    --primary-dark: black;
+    --accent: ;
+
+/* ------ Fonts ------ */
+    --primary-font: "Sunflower", sans-serif;;
+    --heading: ;
+    --title: ;
+    --p: ;
+
+/* ------ Transitions ------ */
+    --transition-01: ;
+}
+
+/* Algemene styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+body {
+    background: var(--main-background);
+}
+
+main {
+    margin: var(--spacing);
+}
+
+p,h1,h2,h3,h4 {
+    color: var(--primary-light);
+}
+
+a {
+    color: var(--primary-light);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    color: var(--primary-light);
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Navigatie */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing);
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--main-background);
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-header {
+    position: relative;
+    width: 5rem;
+    height: auto;
+    z-index: 100;
+}
+
+.menu-button {
+    display:grid;
+	place-items:center;
+    position: fixed;
+    right: var(--spacing);
+    top: var(--spacing);
+    width: 3rem;
+    height: 3rem;
+    background: var(--primary-light);
+    z-index: 100;
+
+    span {
+    position:absolute;
+    width: 2rem;
+	height: 0.1rem;
+	background-color:var(--primary-dark);
+    }
+    span:nth-of-type(1) {
+        transform:translateY(-.4rem);
+        margin-bottom: calc(var(--spacing) / 2);
+    }
+    
+    span:nth-of-type(3) {
+        transform:translateY(.4rem);
+        margin-top: calc(var(--spacing) / 2);
+    }
+}
+
+.menu-opened {
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background: var(--main-background); */
+}
+
+/* Main */
+/* Intro */
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.intro img {
+    display: none;
+}
+
+.intro button {
+    padding: var(--spacing);
+    background: #34239E;
+}
