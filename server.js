@@ -9,7 +9,7 @@ import fetchJson from "./helpers/fetch-json.js";
 import express from "express";
 
 // Stel het basis endpoint in
-const apiUrl = "https://fdnd-agency.directus.app/items";
+const apiUrl = "https://fdnd-agency.directus.app/items/";
 
 // Maak een nieuwe express app aan
 const app = express();
@@ -34,7 +34,17 @@ app.use(express.urlencoded({ extended: true }));
 // Maak een GET route voor de index
 
 app.get("/", function (request, response) {
-  response.render("index");
+  Promise.all([
+    fetchJson(apiUrl + "dda_agencies"),
+    fetchJson(apiUrl + "dda_agencies_vacancies")
+]).then(([agenciesData, vacanciesData]) => {
+  console.log("Agencies Data:", agenciesData.data);
+  console.log("Vacancies Data:", vacanciesData.data);
+    response.render("index", {
+        agencies: agenciesData.data,
+        vacancies: vacanciesData.data
+    });
+});
 });
 
 // 3. Start de webserver

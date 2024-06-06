@@ -16,61 +16,124 @@
                 <h2>Laatste nieuws</h2>
                 <ul>
                     <li>
-                        <img src="images/news-01.jpeg">
-                        <p>03 juni 2024</p>
-                        <h3>Leer het DDA bestuur kennen</h3>
+                        <a href="#">
+                            <div class="image-container">
+                                <img src="images/news-01.jpeg">
+                                <p class="date">03 juni 2024</p>
+                            </div>
+                            <h3>Leer het DDA bestuur kennen</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="images/news-02.webp">
-                        <p>23 mei 2024</p>
-                        <h3>Waarom een betere ISO-norm de weg vrijmaakt voor een inclusief internet in de toekomst</h3>
+                        <a href="#">
+                            <div class="image-container">
+                                <img src="images/news-02.webp">
+                                <p class="date">23 mei 2024</p>
+                            </div>
+                            <h3>Waarom een betere ISO-norm de weg vrijmaakt voor een inclusief internet in de toekomst
+                            </h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="images/news-03.jpg">
-                        <p>29 april 2024</p>
-                        <h3>Partnerbijdrage: Rootnet, een managed hosting bedrijf voor digital agencies</h3>
+                        <a href="#">
+                            <div class="image-container">
+                                <img src="images/news-03.jpg">
+                                <p class="date">29 april 2024</p>
+                            </div>
+                            <h3>Partnerbijdrage: Rootnet, een managed hosting bedrijf voor digital agencies</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="images/news-04.jpg">
-                        <p>23 april 2024</p>
-                        <h3>Leer het DDA bestuur kennen</h3>
+                        <a href="#">
+                            <div class="image-container">
+                                <img src="images/news-04.jpg">
+                                <p class="date">23 april 2024</p>
+                            </div>
+                            <h3>Leer het DDA bestuur kennen</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="images/news-05.png">
-                        <p>15 april 2024</p>
-                        <h3>De balans opgemaakt: het belang, ontwikkelingen en resultaten van de WWD</h3>
+                        <a href="#">
+                            <div class="image-container">
+                                <img src="images/news-05.png">
+                                <p class="date">15 april 2024</p>
+                            </div>
+                            <h3>De balans opgemaakt: het belang, ontwikkelingen en resultaten van de WWD</h3>
+                        </a>
                     </li>
                     <li>
-                        <p>08 april 2024</p>
+                        <a href="#">
+                            <div class="image-container">
+                                <img src="images/news-06.jpg">
+                                <p class="date">08 april 2024</p>
+                            </div>
+                            <h3>Europese verkiezingsprogramma’s onder de loep: wat zijn de heetste digitale hangijzers?
+                            </h3>
+                        </a>
+                    </li>
+                    <div class="image-container">
                         <img src="images/news-06.jpg">
-                        <h3>Europese verkiezingsprogramma’s onder de loep: wat zijn de heetste digitale hangijzers?</h3>
+                        <p class="date">08 april 2024</p>
+                    </div>
+                    <h3>Europese verkiezingsprogramma’s onder de loep: wat zijn de heetste digitale hangijzers?</h3>
                     </li>
                 </ul>
-                <button>&lt;</button>
-                <button>&gt;</button>
-                <a href="#">Naar het nieuwsoverzicht</a>
+                <div class="button-container">
+                    <button><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330"
+                            xml:space="preserve">
+                            <path
+                                d="M233.3 306 127.5 165 233.3 24a15 15 0 1 0-24-18L96.7 156a15 15 0 0 0 0 18l112.5 150a15 15 0 1 0 24-18z" />
+                        </svg>
+                    </button>
+                    <button><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330"
+                            xml:space="preserve">
+                            <path
+                                d="M233.3 156 120.8 6a15 15 0 0 0-24 18l105.7 141L96.8 306a15 15 0 1 0 24 18l112.5-150a15 15 0 0 0 0-18z" />
+                        </svg>
+                    </button>
+                </div>
+                <a class="to-news" href="#">Naar het nieuwsoverzicht</a>
             </section>
 
             <section class="vacancies">
                 <h2>Talent gezocht</h2>
-                <ul>
-                    <li>
-                        <a>
-                            <ul>
-                                <li>vacancy.name</li>
-                                <li>agency.name</li>
-                                <li>vacancy.time</li>
-                                <li>vacancy.location</li>
-                            </ul>
-                        </a>
-                    </li>
+                <ul class="vacancy-container">
+                    <% vacancies.slice(0,2).forEach(vacancy=> { %>
+                        <% const agency=agencies.find(a=> a.id === vacancy.agency_id); %>
+                            <li class="vacancy">
+                                <a href="#">
+                                    <h3>
+                                        <%= vacancy.title %>
+                                    </h3>
+                                    <ul class="vacancy-info">
+                                        <li>
+                                            <%= agency.title %>
+                                        </li>
+                                        <li>
+                                            <%= vacancy.hours %> uur
+                                        </li>
+                                        <li>
+                                            <%= vacancy.locatie %>
+                                        </li>
+                                        <li>
+                                            <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 330 330" xml:space="preserve">
+                                                <path
+                                                    d="M233.3 156 120.8 6a15 15 0 0 0-24 18l105.7 141L96.8 306a15 15 0 1 0 24 18l112.5-150a15 15 0 0 0 0-18z" />
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <% }); %>
                 </ul>
-                <a href="#">Bekijk alle vacatures</a>
+                <a class="to-vacancies" href="#">Bekijk alle vacatures</a>
             </section>
 
             <section class="events">
                 <h2>Events</h2>
-                <p>Spraakmakende sprekers. Inspirerende kennissessies. Events waar je écht bij wilt zijn. En waar je al
+                <p class="events-intro">Spraakmakende sprekers. Inspirerende kennissessies. Events waar je écht bij wilt
+                    zijn. En waar je al
                     je
                     vakgenoten weer spreekt. Versterk je bureau met kennis en inspiratie over bureaumanagement,
                     leiderschap
@@ -79,30 +142,48 @@
                 <ul>
                     <li>
                         <a>
-                            <img src="images/event-01.jpeg">
-                            <p>DDA Golf Toernooi</p>
-                            <p>05 September 2024</p>
-                            <p>Ermelo</p>
+                            <div class="image-container">
+                                <img src="images/event-01.jpeg">
+                                <div class="event-info-container">
+                                    <h3>DDA Golf Toernooi</h3>
+                                    <div>
+                                        <p>05 September 2024</p>
+                                        <p>Ermelo</p>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a>
-                            <img src="images/event-02.jpg">
-                            <p>Dutch Digital Day 2024</p>
-                            <p>28 June 2024</p>
-                            <p>Amsterdam</p>
+                            <div class="image-container">
+                                <img src="images/event-02.jpg">
+                                <div class="event-info-container">
+                                    <h3>Dutch Digital Day 2024</h3>
+                                    <div>
+                                        <p>28 June 2024</p>
+                                        <p>Amsterdam</p>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a>
-                            <img src="images/event-03.jpg">
-                            <p>Dutch Digital Day Talentprogramma</p>
-                            <p>28 June 2024</p>
-                            <p>Amsterdam</p>
+                            <div class="image-container">
+                                <img src="images/event-03.jpg">
+                                <div class="event-info-container">
+                                    <h3>Dutch Digital Day Talentprogramma</h3>
+                                    <div>
+                                        <p>28 June 2024</p>
+                                        <p>Amsterdam</p>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ul>
-                <a href="#">Bekijk alle events</a>
+                <a href="#" class="to-events">Bekijk alle events</a>
             </section>
 
             <section class="members">
@@ -114,13 +195,18 @@
                     Leer
                     onze
                     leden kennen en ontdek welk bureau het beste bij je past.</p>
-                <ul>
-                    <li>
-                        <a>
-                            <img src="api.image">
-                        </a>
-                    </li>
-                </ul>
+                <div class="logo-container">
+                    <ul>
+                        <% agencies.forEach(agency=> { %>
+                            <li>
+                                <a>
+                                    <img src="	https://fdnd-agency.directus.app/assets/<%= agency.logo %>">
+                                </a>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+                <a href="#" class="to-members">Bekijk al onze leden</a>
             </section>
         </main>
 

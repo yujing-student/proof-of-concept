@@ -5,20 +5,48 @@
 :root {
 /* ------ Spacing ------ */
     --spacing: 1rem;
-    --section-spacing: ;
-    --heading-spacing: ;
+    --section-spacing: 3rem ;
+    --heading-spacing: 2rem;
 
 /* ------ Colors ------ */
-    --main-background: #1E1E1E;
+    --main-background: black;
     --primary-light: white;
     --primary-dark: black;
     --accent: ;
+    --gradient-01: linear-gradient(
+        35deg,
+        hsl(248deg 64% 38%) 0%,
+        hsl(253deg 65% 40%) 10%,
+        hsl(257deg 66% 42%) 20%,
+        hsl(260deg 67% 44%) 30%,
+        hsl(264deg 69% 46%) 40%,
+        hsl(267deg 71% 48%) 50%,
+        hsl(270deg 73% 50%) 60%,
+        hsl(273deg 78% 51%) 70%,
+        hsl(277deg 86% 52%) 80%,
+        hsl(280deg 93% 52%) 90%,
+        hsl(283deg 100% 50%) 100%
+      );
+    --gradient-02: linear-gradient(
+        45deg,
+        hsl(240deg 100% 15%) 0%,
+        hsl(247deg 100% 14%) 11%,
+        hsl(253deg 100% 13%) 22%,
+        hsl(258deg 100% 13%) 33%,
+        hsl(262deg 100% 12%) 44%,
+        hsl(265deg 100% 12%) 56%,
+        hsl(269deg 100% 11%) 67%,
+        hsl(272deg 100% 11%) 78%,
+        hsl(275deg 100% 10%) 89%,
+        hsl(278deg 100% 10%) 100%
+      );
+    --text-shadow: linear-gradient( rgb(0 0 0 / 0), rgba(0 0 0 / 1) );
+    
+/* ------ Border radius ------ */
+    --radius-01: 2px;
 
 /* ------ Fonts ------ */
-    --primary-font: "Sunflower", sans-serif;;
-    --heading: ;
-    --title: ;
-    --p: ;
+    --primary-font: "Sunflower", sans-serif;
 
 /* ------ Transitions ------ */
     --transition-01: ;
@@ -41,8 +69,25 @@ main {
     margin: var(--spacing);
 }
 
+section {
+    margin-bottom: var(--section-spacing);
+}
+
 p,h1,h2,h3,h4 {
     color: var(--primary-light);
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: var(--heading-spacing);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.5rem;
 }
 
 a {
@@ -63,6 +108,7 @@ button {
     cursor: pointer;
     font: inherit;
     padding: 0;
+    border-radius: var(--radius-01);
 }
 
 img {
@@ -99,6 +145,14 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing);
+}
+
+nav button {
+    padding: var(--spacing);
+    background: var(--gradient-01);
+    border-radius: var(--radius-01);
+    text-align: center;
 }
 
 .logo-header {
@@ -138,15 +192,18 @@ nav ul {
 
 .menu-opened {
     display: flex;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100dvh;
-    background: var(--main-background); */
+    gap: var(--heading-spacing);
 }
 
 /* Main */
+
 /* Intro */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--heading-spacing);
+}
 
 h1 {
     display: flex;
@@ -161,5 +218,291 @@ h1 {
 
 .intro button {
     padding: var(--spacing);
-    background: #34239E;
+    background: var(--gradient-01);
+}
+
+/* Nieuws */
+
+.news {
+    display: flex;
+    flex-direction: column;
+}
+
+.news ul {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: calc(var(--spacing) * 2 );
+}
+
+.news li {
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    width: 100%;
+    max-width: 30rem;
+}
+
+.news .image-container {
+    position: relative;
+    margin-bottom: var(--spacing);
+}
+
+.news img {
+    object-fit: cover;
+    display: block;
+    max-height: 20rem;
+}
+
+.news .date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin:0;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: end;
+    padding: var(--spacing);
+    background-image: var(--text-shadow);
+}
+
+.news .to-news {
+    padding: var(--spacing);
+    background: var(--gradient-01);
+    text-align: center;
+    border-radius: var(--radius-01);
+}
+
+.news svg path {
+    fill: white;
+}
+
+.news .button-container {
+    display: flex;
+    justify-content: center;
+    gap: calc(var(--spacing) * 2 );
+    margin-bottom: var(--heading-spacing);
+}
+
+/* Vacatures */
+
+.vacancies {
+    display: flex;
+    flex-direction: column;
+}
+
+.vacancies .vacancy-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    margin-bottom: var(--heading-spacing);
+}
+
+.vacancies .vacancy {
+    background: var(--gradient-02);
+    padding: var(--spacing);
+    border-radius: var(--radius-01);
+}
+
+.vacancies h3 {
+    margin-bottom: var(--spacing);
+}
+
+.vacancies .vacancy-info {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+}
+
+.vacancies .vacancy-info li {
+    font-weight: 300;
+}
+
+.vacancies svg path {
+    fill: white;
+}
+
+.vacancies .to-vacancies {
+    padding: var(--spacing);
+    background: var(--gradient-01);
+    border-radius: var(--radius-01);
+    text-align: center;
+}
+
+/* Events */
+
+.events {
+    display: flex;
+    flex-direction: column;
+}
+
+.events-intro {
+    margin-bottom: var(--heading-spacing);
+}
+
+.events ul {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2 );
+    margin-bottom: var(--heading-spacing);
+}
+
+.events li {
+    max-width: 30rem;
+}
+
+.events .image-container {
+    position: relative;
+}
+
+.events img {
+    object-fit: cover;
+    border-radius: var(--radius-01);
+    display: block;
+    max-height: 20rem;
+}
+
+.event-info-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: var(--spacing);
+    background-image: var(--text-shadow);
+}
+
+.event-info-container div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-info-container p {
+    font-weight: 300;
+}
+
+.events .to-events {
+    padding: var(--spacing);
+    background: var(--gradient-01);
+    border-radius: var(--radius-01);
+    text-align: center;
+}
+
+/* Onze leden */
+
+.members {
+    display: flex;
+    flex-direction: column;
+}
+
+.members p {
+    margin-bottom: var(--heading-spacing);
+}
+
+.members .logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.members ul {
+    display: flex;
+    gap: var(--spacing);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-bottom: var(--heading-spacing);
+}
+
+.members li {
+    scroll-snap-align: center;
+}
+
+.members img {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+}
+
+.members .to-members {
+    padding: var(--spacing);
+    background: var(--gradient-01);
+    border-radius: var(--radius-01);
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    margin: var(--spacing);
+    padding-top: var(--section-spacing);
+    border-top: 1px solid var(--primary-light);
+}
+
+.logo-footer {
+    margin-bottom: var(--heading-spacing);
+    display: inline-block;
+}
+
+.logo-footer img {
+    width: 5rem;
+    height: auto;
+}
+
+footer .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    margin-bottom: var(--heading-spacing);
+    /* text-align: center; */
+}
+
+footer h4 {
+    margin-bottom: var(--spacing);
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+footer form label {
+    color: var(--primary-light);
+    font-weight: 300;
+}
+
+footer form input {
+    height: calc(var(--spacing) * 2.5);
+    border-radius: var(--radius-01);
+    padding: var(--spacing);
+    border: none;
+}
+
+footer button[type="submit"] {
+    padding: calc(var(--spacing) / 2);
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .info {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) / 2);
+    margin-bottom: var(--heading-spacing);
+}
+
+footer .info li {
+    color: var(--primary-light);
+    font-weight: 300;
+}
+
+footer .socials {
+    display: flex;
+    gap: var(--spacing);
 }
