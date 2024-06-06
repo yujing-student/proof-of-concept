@@ -27,13 +27,6 @@
     src: url(https://static.bnr.nl/assets/bnr-next/fonts/PlusJakartaSans-Bold.woff2) format("woff2")
 
 }
-
-body {
-    font-family: "plusJakarta", sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: var(--color-black);
-}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -42,17 +35,65 @@ body {
     background-color: var(--color-black);
 
 }
-.listarticles{
-    display: flex;
-    flex-direction: column;
+.button__nav{
+    background-color: transparent;
+    /*color: white;*/
 }
+svg{
+    font-size: 1.2em;
+}
+li{
+    list-style: none;
+
+}
+body {
+    font-family: "plusJakarta", sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--color-black);
+}
+.gridcontainter{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+.niews{
+    background-color: var(--yellow);
+}
+.niews__filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--gray200);
+
+}
+.sectionArticles{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+
+}
+.articles{
+    padding-bottom: 2em;
+    border-bottom: solid var(--gray) 3px;
+
+}
+.article__title{
+    font-weight: 700;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .article__img{
-    /*width: 100%;*/
-    /*height: auto;*/
-    width: 200px;
-    height: 100px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
+
+
 /*dit word onderdeel van een animatie zie skyradio als voorbeeld*/
 
 
