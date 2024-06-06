@@ -35,9 +35,35 @@
     background-color: var(--color-black);
 
 }
+
+.nav {
+    display: flex; /* Enables flexbox for the navigation bar */
+    justify-content: space-between; /* Distributes items evenly */
+    align-items: center; /* Optionally centers logo vertically */
+}
+
+.nav ul {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+.nav li {
+    display: inline-flex; /* Makes icons act like inline elements */
+}
+
+.bnrLogo{
+    width:31px;
+}
+
+
+
 .button__nav{
     background-color: transparent;
     /*color: white;*/
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    border: none;
 }
 svg{
     font-size: 1.2em;
@@ -58,16 +84,36 @@ body {
     gap: 1rem;
     padding: 1rem;
 }
-.niews{
-    background-color: var(--yellow);
-}
-.niews__filter{
+
+    .nieuws {
+        background-color: var(--yellow);
+        padding: 1rem;
+        overflow: hidden;
+    }
+
+.nieuws__carousssel{
     display: flex;
+    flex-direction: row;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    white-space: nowrap; /* Prevent items from wrapping */
+    padding: 1rem;
+
+}
+.nieuws__filter{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: var(--gray200);
 
+}
+.nieuws__link{
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 0.4em;
+    border: solid var(--color-black) 3px;
+    background-color: white;
 }
 .sectionArticles{
     display: grid;
@@ -80,17 +126,19 @@ body {
     border-bottom: solid var(--gray) 3px;
 
 }
-.article__title{
+.article__title {
     font-weight: 700;
-    /*white-space: nowrap;*/
+    /*white-space: nowrap; !* Prevent wrapping *!*/
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 20px;
 }
+
 
 .article__img{
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
