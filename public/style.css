@@ -52,7 +52,7 @@
     --transition-01: ;
 }
 
-/* Algemene styling */
+/* ----------- Algemene styling ----------- */
 
 * {
     margin: 0;
@@ -114,6 +114,8 @@ img {
 .no-scroll {
     overflow: hidden;
 }
+
+/* ----------- Header ----------- */
 
 /* Navigatie */
 
@@ -191,7 +193,7 @@ nav button {
     gap: var(--heading-spacing);
 }
 
-/* Main */
+/* ----------- Main ----------- */
 
 /* Intro */
 
@@ -236,6 +238,10 @@ h1 {
     scroll-snap-align: center;
     width: 100%;
     max-width: 30rem;
+}
+
+.news a {
+    display: inline-block;
 }
 
 .news .image-container {
@@ -297,8 +303,14 @@ h1 {
 
 .vacancies .vacancy {
     background: var(--gradient-02);
-    padding: var(--spacing);
+    /* padding: var(--spacing); */
     border-radius: var(--radius-01);
+}
+
+.vacancies a {
+    display: inline-block;
+    width: 100%;
+    padding: var(--spacing);
 }
 
 .vacancies h3 {
@@ -427,7 +439,8 @@ h1 {
     text-align: center;
 }
 
-/* Footer */
+/* ----------- Footer ----------- */
+
 
 footer {
     margin: var(--spacing);
@@ -501,4 +514,10 @@ footer .info li {
 footer .socials {
     display: flex;
     gap: var(--spacing);
+}
+
+/* ----------- States ----------- */
+
+.active {
+    border-bottom: 1px solid white;
 }

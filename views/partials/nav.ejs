@@ -1,7 +1,7 @@
 <header>
     <a href="/"><img class="logo-header" src="/images/logo-white.png" alt="logo"></a>
 
-    <button class="menu-button">
+    <button aria-label="open menu" class="menu-button">
         <span></span>
         <span></span>
         <span></span>
@@ -9,7 +9,7 @@
     <nav>
         <ul>
             <li>
-                <a href="/">Home</a>
+                <a href="/" <%- current=='/' ?' class=\"active\"':'' %>>Home</a>
             </li>
             <li>
                 <a href="#">Over DDA</a>

@@ -1,5 +1,5 @@
 <%- include('partials/head.ejs') %>
-    <%- include('partials/nav.ejs') %>
+    <%- include('partials/nav.ejs', {current: '/' }) %>
 
         <main>
             <section class="intro">
@@ -16,7 +16,7 @@
                 <h2>Laatste nieuws</h2>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="https://dutchdigitalagencies.com/leer-het-dda-bestuur-kennen-3/">
                             <div class="image-container">
                                 <img src="images/news-01.jpeg" alt="">
                                 <p class="date">03 juni 2024</p>
@@ -25,7 +25,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a
+                            href="https://dutchdigitalagencies.com/waarom-een-betere-iso-norm-de-weg-vrijmaakt-voor-een-inclusief-internet-in-de-toekomst/">
                             <div class="image-container">
                                 <img src="images/news-02.webp" alt="">
                                 <p class="date">23 mei 2024</p>
@@ -35,7 +36,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a
+                            href="https://dutchdigitalagencies.com/partnerbijdrage-rootnet-een-managed-hosting-bedrijf-voor-digital-agencies/">
                             <div class="image-container">
                                 <img src="images/news-03.jpg" alt="">
                                 <p class="date">29 april 2024</p>
@@ -44,7 +46,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://dutchdigitalagencies.com/leer-het-dda-bestuur-kennen-2/">
                             <div class="image-container">
                                 <img src="images/news-04.jpg" alt="">
                                 <p class="date">23 april 2024</p>
@@ -53,7 +55,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a
+                            href="https://dutchdigitalagencies.com/de-balans-opgemaakt-het-belang-ontwikkelingen-en-resultaten-van-de-wwd/">
                             <div class="image-container">
                                 <img src="images/news-05.png" alt="">
                                 <p class="date">15 april 2024</p>
@@ -62,7 +65,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a
+                            href="https://dutchdigitalagencies.com/europese-verkiezingsprogrammas-onder-de-loep-wat-zijn-de-heetste-digitale-hangijzers/">
                             <div class="image-container">
                                 <img src="images/news-06.jpg" alt="">
                                 <p class="date">08 april 2024</p>
@@ -71,23 +75,16 @@
                             </h3>
                         </a>
                     </li>
-                    <li>
-                        <div class="image-container">
-                            <img src="images/news-06.jpg" alt="">
-                            <p class="date">08 april 2024</p>
-                        </div>
-                        <h3>Europese verkiezingsprogramma’s onder de loep: wat zijn de heetste digitale hangijzers?</h3>
-                    </li>
                 </ul>
                 <div class="button-container">
-                    <button><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330"
-                            xml:space="preserve">
+                    <button aria-label="vorige"><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 330 330" xml:space="preserve">
                             <path
                                 d="M233.3 306 127.5 165 233.3 24a15 15 0 1 0-24-18L96.7 156a15 15 0 0 0 0 18l112.5 150a15 15 0 1 0 24-18z" />
                         </svg>
                     </button>
-                    <button><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330"
-                            xml:space="preserve">
+                    <button aria-label="volgende"><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 330 330" xml:space="preserve">
                             <path
                                 d="M233.3 156 120.8 6a15 15 0 0 0-24 18l105.7 141L96.8 306a15 15 0 1 0 24 18l112.5-150a15 15 0 0 0 0-18z" />
                         </svg>
@@ -142,7 +139,7 @@
                     de laatste ontwikkelingen. </p>
                 <ul>
                     <li>
-                        <a>
+                        <a href="https://dda.livits.net/bijeenkomsten/openbaar/dda-golf-toernooi">
                             <div class="image-container">
                                 <img src="images/event-01.jpeg" alt="">
                                 <div class="event-info-container">
@@ -156,7 +153,7 @@
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="https://dutchdigitalagencies.com/event/dutch-digital-day-2024/">
                             <div class="image-container">
                                 <img src="images/event-02.jpg" alt="">
                                 <div class="event-info-container">
@@ -170,7 +167,7 @@
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a href="https://dutchdigitalagencies.com/event/dutch-digital-day-talentprogramma/">
                             <div class="image-container">
                                 <img src="images/event-03.jpg" alt="">
                                 <div class="event-info-container">
@@ -200,7 +197,7 @@
                     <ul>
                         <% agencies.forEach(agency=> { %>
                             <li>
-                                <a>
+                                <a href="#" tabindex="-1">
                                     <img src="	https://fdnd-agency.directus.app/assets/<%= agency.logo %>"
                                         alt="agency logo">
                                 </a>
