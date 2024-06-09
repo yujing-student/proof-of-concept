@@ -7,3 +7,15 @@ node_modules
 .env
 README.md
 docs/INSTRUCTIONS.md
+
+.idea/.gitignore
+.idea/modules.xml
+.idea/proof-of-concept.iml
+.idea/v1.iml
+.idea/vcs.xml
+LICENSE
+.idea/workspace.xml
+.idea/misc.xml
+.idea/jsLibraryMappings.xml
+.idea/dictionaries
+.idea
