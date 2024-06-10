@@ -3,13 +3,19 @@
 
         <main>
             <section class="intro">
-                <h1><span><b>D</b>utch</span><span><b>D</b>igital</span><span><b>A</b>gencies</span></h1>
-                <p>Samen maken digitale bureaus de wereld om ons heen steeds een beetje slimmer. Dutch Digital Agencies
-                    is
-                    de
-                    branchevereniging voor de beste verslimmers uit de Nederlandse digitale industrie.</p>
-                <button>Word ook lid!</button>
-                <img src="images/header-photo.png" alt="">
+                <div class="intro-text">
+                    <h1><span><b>D</b>utch</span><span><b>D</b>igital</span><span><b>A</b>gencies</span></h1>
+                    <p>Samen maken digitale bureaus de wereld om ons heen steeds een beetje slimmer. Dutch Digital
+                        Agencies
+                        is
+                        de
+                        branchevereniging voor de beste verslimmers uit de Nederlandse digitale industrie.</p>
+                    <button>Word ook lid!</button>
+                </div>
+                <div class="image-container">
+                    <div class="member-counter value" target-value="160">0+ leden</div>
+                    <img src="images/event-02.jpg" alt="">
+                </div>
             </section>
 
             <section class="news">
@@ -96,7 +102,7 @@
             <section class="vacancies">
                 <h2>Talent gezocht</h2>
                 <ul class="vacancy-container">
-                    <% vacancies.slice(0,2).forEach(vacancy=> { %>
+                    <% vacancies.forEach(vacancy=> { %>
                         <% const agency=agencies.find(agencyItem=> agencyItem.id === vacancy.agency_id); %>
                             <li class="vacancy">
                                 <a href="#">
@@ -105,7 +111,7 @@
                                     </h3>
                                     <ul class="vacancy-info">
                                         <li>
-                                            <%= agency.title %>
+                                            <%= agency ? agency.title : 'Unknown Agency' %>
                                         </li>
                                         <li>
                                             <%= vacancy.hours %> uur
@@ -209,4 +215,4 @@
             </section>
         </main>
 
-        <%- include('partials/foot.ejs') %>
+        <%- include('partials/foot.ejs', {current: '/' }) %>

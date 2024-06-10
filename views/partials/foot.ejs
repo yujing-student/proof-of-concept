@@ -3,7 +3,7 @@
 
     <ul class="menu-links">
         <li>
-            <a href="/">Home</a>
+            <a href="/" <%- current=='/' ?' class=\"active\"':'' %>>Home</a>
         </li>
         <li>
             <a href="#">Over DDA</a>
@@ -28,7 +28,7 @@
         </li>
     </ul>
 
-    <section>
+    <section class="newsletter">
         <h3>Nieuwsbrief</h3>
         <form>
             <label for="email">E-mailadres*</label>
