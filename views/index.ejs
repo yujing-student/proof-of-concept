@@ -8,7 +8,19 @@
         <h1>BNR beats business</h1>
         <!--        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-->
 
-        <img src="assets/BNR-logo.jpg" alt="logo" class="imageBNR">
+
+        <picture>
+            <source srcset="assets/BNR-logo.jpg?width=400&height=300&fit=cover&format=webp"
+                    type="image/webp">
+
+            <source srcset="assets/BNR-logo.jpg?width=400&height=300&fit=cover&format=avif"
+                    type="image/avif">
+
+
+            <img src="assets/BNR-logo.jpg?width=200&height=100&fit=cover" loading="lazy"
+                 alt="Image of the house" class="article__img lazyload"
+            >
+        </picture>
         <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 12.5c0 2.3-.8 4.5-2 6.2l.7.8c1.5-1.9 2.4-4.4 2.4-7 0-3.1-1.2-5.9-3.2-8l-.5 1c1.6 1.8 2.6 4.3 2.6 7z"
                   fill="#FFD200"></path>
@@ -68,8 +80,9 @@
                                     type="image/webp">
 
 
-                            <img src="https://bnr-external-prod.imgix.net/<%= article.photo.URL %>?width=400&height=300&fit=cover"
-                                 alt="Image of the house" width="<%= article.photo.URLe %>"
+                            <img src="<%= article.photo.URL %>?width=200&height=100&fit=cover" loading="lazy"
+                                 alt="Image of the house"
+                                 width="<%= article.photo.URL %>"
                                  height=" <%= article.photo.URL %>" class="article__img"
                             >
                         </picture>
