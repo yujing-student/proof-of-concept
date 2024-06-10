@@ -5,6 +5,7 @@
 <body>
 <main class="gridcontainter">
     <section>
+        <h1>dit is de branch other cards</h1>
         <h1>BNR beats business</h1>
         <!--        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-->
 
@@ -38,15 +39,6 @@
     <section class="sectionArticles">
         <% firstTenArticles.forEach(article => { %>
             <article class="articles">
-
-                <div class="article__informatoon">
-                    <h2 class="article__title"><%= article.title %></h2>
-                    <p class="article__text"><%= article.introduction %></p>
-
-                </div>
-
-
-
                 <% if (article.photo) { %>
                     <picture>
                         <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=avif"
@@ -62,6 +54,15 @@
                         >
                     </picture>
                 <% } %>
+                <div class="article__informatoon">
+                    <h2 class="article__title"><%= article.title %></h2>
+                    <p class="article__text"><%= article.introduction %></p>
+
+
+                </div>
+
+
+
 
             </article>
         <% }) %>

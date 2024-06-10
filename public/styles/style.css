@@ -449,7 +449,7 @@ body {
 
 .articles {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 1em;
 
 
@@ -464,6 +464,7 @@ body {
     column-gap: 1em;
     padding: 1em;
     grid-row-start: 1;
+    grid-column-start: 2;
     /*display: -webkit-box;*/
     /*overflow: hidden;*/
     /*-webkit-line-clamp: 2;*/
@@ -505,7 +506,9 @@ body {
 .article__img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
+    margin-top: 2em;
+
     /*display: grid;*/
     /*grid-column-start: 1;*/
     /*grid-row: 1 ;*/
@@ -522,7 +525,6 @@ body {
 
 
     .articles {
-        /*grid-template-columns: 15em 1fr;*/
         border: solid var(--gray) 3px;
     }
 
