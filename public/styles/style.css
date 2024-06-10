@@ -28,14 +28,16 @@
     src: url(https://static.bnr.nl/assets/bnr-next/fonts/PlusJakartaSans-Bold.woff2) format("woff2")
 
 }
-body{
+
+body {
     font-family: "plusJakarta", sans-serif;
     font-size: 16px;
     line-height: 1.5em;
     color: var(--color-black);
 
 }
-.nav{
+
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,17 +62,15 @@ body{
     display: inline-flex; /* Makes icons act like inline elements */
 }
 
-.bnrLogo{
-    width:31px;
+.bnrLogo {
+    width: 31px;
 }
-
 
 
 #nav__submenu:target {
     z-index: 1; /* Bring submenu to front when button is clicked */
     animation: slideIn .2s linear forwards;
 }
-
 
 
 @keyframes slideIn {
@@ -81,11 +81,11 @@ body{
 
     to {
 
-        transform: translateX(-8vh);/* Animate submenu to slide in from left */
+        transform: translateX(-8vh); /* Animate submenu to slide in from left */
     }
 }
 
-#nav__submenu{
+#nav__submenu {
 
     transform: translateX(-124vh);
     /*left: -100%;*/
@@ -100,10 +100,12 @@ body{
 
 
 }
+
 #nav__submenu.hidden { /* Hidden class for initial state */
     display: none;
 }
-.nav__submenu__li{
+
+.nav__submenu__li {
     height: 5em;
     padding: 0em;
     color: var(--white);
@@ -126,18 +128,19 @@ nav a.svg_kruisje_close:active {
 }
 
 
-
-.button__nav{
+.button__nav {
     background-color: transparent;
     /*color: white;*/
     width: 40px; /* Adjust width as needed */
     height: 40px; /* Adjust height as needed */
     border: none;
 }
-svg{
+
+svg {
     font-size: 1.2em;
 }
-li{
+
+li {
     list-style: none;
 
 }
@@ -146,8 +149,7 @@ li{
 
 /*https://codepen.io/shooft/pen/LYMEWVm versie sanne*/
 
-#menuToggle
-{
+#menuToggle {
     display: block;
     position: relative;
     /*top: 50px;*/
@@ -158,22 +160,19 @@ li{
     user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
     text-decoration: none;
     color: #232323;
 
     transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover {
     color: tomato;
 }
 
 
-#menuToggle input
-{
+#menuToggle input {
     display: block;
     width: 40px;
     height: 32px;
@@ -192,33 +191,30 @@ li{
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
     display: block;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
 
-    background: #cdcdcd;
+    background: var(--white);
     border-radius: 3px;
 
     z-index: 1;
 
     transform-origin: 4px 0px;
 
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
     opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
     transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
 }
 
@@ -226,8 +222,7 @@ li{
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
@@ -236,8 +231,7 @@ li{
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -245,8 +239,7 @@ li{
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -254,15 +247,14 @@ li{
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
     position: absolute;
     width: 300px;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
 
-    background: #ededed;
+    background: var(--color-black);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -270,25 +262,23 @@ li{
     transform-origin: 0% 0%;
     transform: translate(-465%, 0);
 
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
-#menu li
-{
+#menu li {
     padding: 10px 0;
     font-size: 22px;
+    color: var(--white);
 }
 
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
     transform: none;
 }
 
 /*einde codepen voorbeeld*/
-
 
 
 body {
@@ -297,17 +287,20 @@ body {
     line-height: 1.5em;
     color: var(--color-black);
 }
-.gridcontainter{
+
+.gridcontainter {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 1rem;
 }
 
-.imageBNR{
+.imageBNR {
     width: 60%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
+    margin: 0 auto;
+    display: grid;
 }
 
 .nieuws {
@@ -316,7 +309,7 @@ body {
     overflow: hidden;
 }
 
-.nieuws__carousssel{
+.nieuws__carousssel {
     display: flex;
     flex-direction: row;
     overflow-x: scroll; /* Enable horizontal scrolling */
@@ -325,7 +318,8 @@ body {
     padding: 1rem;
 
 }
-.nieuws__filter{
+
+.nieuws__filter {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -333,7 +327,8 @@ body {
     padding: 1rem;
 
 }
-.nieuws__link{
+
+.nieuws__link {
     color: var(--color-black);
     text-decoration: none;
     padding: 0.4em;
@@ -342,7 +337,7 @@ body {
 }
 
 /*audiobutton*/
-.audio{
+.audio {
     position: absolute;
     top: 0;
     left: 0;
@@ -351,7 +346,7 @@ body {
     /*display:none;*/
 }
 
-.playbutton{
+.playbutton {
     position: relative;
     width: 70px;
     height: 70px;
@@ -372,7 +367,7 @@ body {
 
 
 /*dit is het playicoontje*/
-.pauzebutton{
+.pauzebutton {
     margin-left: 5px;
     /*height: 20px;*/
     border-width: 10px 0 10px 17px;
@@ -387,7 +382,7 @@ body {
 }
 
 /*dit is het pauze icoontje*/
-.pauzebutton-open{
+.pauzebutton-open {
     border-style: none;
     box-sizing: border-box;
     position: relative;
@@ -445,13 +440,14 @@ body {
 
 
 */
-.sectionArticles{
+.sectionArticles {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2em;
+    justify-content: center;
 
 }
-.articles{
+
+.articles {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 1em;
@@ -461,12 +457,13 @@ body {
     padding: 1em;
 
 }
-.article__informatoon{
+
+.article__informatoon {
     display: grid;
     /*grid-template-rows: 3em 1fr;*/
     column-gap: 1em;
     padding: 1em;
-    grid-row-start: 1 ;
+    grid-row-start: 1;
     /*display: -webkit-box;*/
     /*overflow: hidden;*/
     /*-webkit-line-clamp: 2;*/
@@ -491,7 +488,8 @@ body {
 
 
 }
-.article__text{
+
+.article__text {
     font-size: 16px;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -504,7 +502,7 @@ body {
 }
 
 
-.article__img{
+.article__img {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -518,17 +516,17 @@ body {
 @media (min-width: 400px) {
 
 
-
 }
 
-@media (min-width : 768px) {
+@media (min-width: 768px) {
 
 
-    .articles{
+    .articles {
         /*grid-template-columns: 15em 1fr;*/
         border: solid var(--gray) 3px;
     }
-    .sectionArticles{
+
+    .sectionArticles {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(430px, 0));
 
@@ -538,11 +536,10 @@ body {
     }
 
 
-
 }
 
 
-@media (min-width : 570px) {
+@media (min-width: 570px) {
 
     /************************/
     /*lijsten*/
@@ -551,7 +548,7 @@ body {
 }
 
 /*score */
-@media (min-width : 1200px) {
+@media (min-width: 1200px) {
 
 }
 
