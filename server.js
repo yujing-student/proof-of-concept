@@ -27,13 +27,23 @@ app.get('/', (request, response) => {
                 // console.log(`Article Title: ${article.title}`);  // Assuming 'title' is a property
                 // const firstTenArticles = article.slice(0, 10);
                 // Access other properties as needed
+                console.log(articles["1"]);
+                // const last10Items = articles.slice(-10);
+
+                // let lastElement = articles[articles.length - 40];
             });
+
+            const firstTenArticles = articles.slice(0, 10)
+
+
+
 
 
 
 
             response.render('index', {
                 articles,
+                firstTenArticles,
                 audioUrl,
             });
         })
