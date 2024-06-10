@@ -227,7 +227,7 @@ li {
 #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
+    /*background: #232323;*/
 }
 
 /*
@@ -252,7 +252,7 @@ li {
 #menu {
     position: absolute;
     width: 300px;
-    margin: -100px 0 0 -50px;
+    margin: -72px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
 
@@ -305,12 +305,82 @@ body {
     display: grid;
 }
 
-.nieuws {
-    background-color: var(--yellow);
+.divniews{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 1rem;
+
+    margin: 0 auto;
+}
+.nieuws {
+    /*background-color: var(--yellow);*/
+    position: relative;
     overflow: hidden;
+    transition: color .5s linear;
+    background-color: var(--yellow) 50%, var(--white) 50%;
+    background-size: 100% 100%; /* Ensures colors fill the entire section */
+    background-position: 0 0;
+
 }
 
+.nieuws__h1{
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+.nieuws__yellowBackground{
+    /*content: "";*/
+    /*position: absolute; !* Positions the element on top of the section *!*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+
+
+    background-color: var(--yellow);
+
+
+    width: 490px;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s linear;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 384px;
+    height: 100%;
+    transition: background-color .5s linear;
+
+
+
+
+}
+.nieuws__yellowBackground:after{
+    content: "";
+    position: absolute;
+    top: 42px;
+    height: 100%;
+    right: 0;
+    left: 283px;
+    background: var(--white);
+    width: 202px;
+    height: 202px;
+    transform: rotate(45deg);
+}
+/*.nieuws__yellowBackground{*/
+/*    background-color: var(--yellow);*/
+/*    z-index: -1;*/
+/*    width: 384px;*/
+/*    height: 100%;*/
+/*    transition: background-color .5s linear;*/
+
+/*}*/
+H1{
+    position: relative;
+    z-index: 1;
+}
 .nieuws__carousssel {
     display: flex;
     flex-direction: row;
@@ -318,6 +388,8 @@ body {
     scroll-snap-type: x mandatory; /* Enable scroll snapping */
     white-space: nowrap; /* Prevent items from wrapping */
     padding: 1rem;
+    POSITION: RELATIVE;
+    z-index: 5;
 
 }
 
@@ -445,7 +517,7 @@ body {
 .sectionArticles {
     display: grid;
     grid-template-columns: 1fr;
-    justify-content: center;
+    gap: 2em;
 
 }
 
@@ -453,9 +525,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 1em;
-    row-gap: .5rem;
 
-    border-bottom: solid var(--gray-border) 1px;
+    row-gap: .5rem;
+   border-top: .5px solid var(--gray-border);
+    /*border-bottom: solid var(--gray-border) 1px;*/
     height: 100%;
     transition: background-color .2s ease-in-out;
 
