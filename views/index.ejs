@@ -28,13 +28,17 @@
                   fill="#FFD200"></path>
         </svg>
 
-        <button class="playbutton" name="playlistbutton" role="button" aria-label="this is the button to start teh playlist">
-            <audio controls class="audio">
-                <source src="<%= audioUrl %>">
-            </audio>
-            <div class="pauzebutton">
-            </div>
-        </button>
+        <div class="fixednavbar">
+
+            <button class="playbutton" name="playlistbutton" role="button" aria-label="this is the button to start teh playlist">
+                <audio controls class="audio">
+                    <source src="<%= audioUrl %>">
+                </audio>
+                <div class="pauzebutton">
+                </div>
+            </button>
+
+        </div>
 
 
     </section>

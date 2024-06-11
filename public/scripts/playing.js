@@ -4,7 +4,8 @@ hamburger()
 function playing() {
   // Get the video
     const audio = document.querySelector('.audio'); // Use querySelector for efficiency
-    const playButton = document.querySelector('.pauzebutton');
+    const playButton = document.querySelector('.playbutton');
+    // .pauzebutton
 
     function togglePlayPause() {
         if (audio.paused) {

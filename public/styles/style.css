@@ -269,6 +269,32 @@ li {
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
+.navyellobackground {
+    position: absolute;
+    top: 11px;
+    left: 277px;
+    width: 16%;
+    height: 33%;
+    z-index: 8;
+    transition: background-color .5s linear;
+
+    /* Remove background color (optional): */
+    background-color: transparent; /* or your desired background color */
+
+
+    /* Create the yellow half using :after */
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: var(--yellow);
+        rotate: 45deg;
+    }
+}
+
 
 #menu li {
     padding: 10px 0;
@@ -318,111 +344,22 @@ body {
     display: grid;
 }
 
-.divniews{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-
-    margin: 0 auto;
-}
-.nieuws {
-    /*background-color: var(--yellow);*/
-    position: relative;
-    overflow: hidden;
-    transition: color .5s linear;
-    background-color: var(--yellow) 50%, var(--white) 50%;
-    background-size: 100% 100%; /* Ensures colors fill the entire section */
-    background-position: 0 0;
-
-}
-
-.nieuws__h1{
-    padding-left: 0.5em;
-    padding-top: 0.5em;
-}
-
-.nieuws__yellowBackground{
-    /*content: "";*/
-    /*position: absolute; !* Positions the element on top of the section *!*/
+.fixednavbar{
+    position: fixed;
+    margin:  0 auto;
+    background-color: var(--color-black);
     /*top: 0;*/
-    /*right: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-
-
-    background-color: var(--yellow);
-
-
-    width: 490px;
-    position: relative;
-    overflow: hidden;
-    transition: color .5s linear;
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 384px;
-    height: 100%;
-    transition: background-color .5s linear;
-
-
-
+    width: 100%;
+    /*z-index: 1000;*/
+    /*background-color: var(--color-black);*/
+    /*color: var(--white);*/
+    /*padding: 1em;*/
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
 
 }
-.nieuws__yellowBackground:after{
-    content: "";
-    position: absolute;
-    top: 42px;
-    height: 100%;
-    right: 0;
-    left: 283px;
-    background: var(--white);
-    width: 202px;
-    height: 202px;
-    transform: rotate(45deg);
-}
-/*.nieuws__yellowBackground{*/
-/*    background-color: var(--yellow);*/
-/*    z-index: -1;*/
-/*    width: 384px;*/
-/*    height: 100%;*/
-/*    transition: background-color .5s linear;*/
-
-/*}*/
-H1{
-    position: relative;
-    z-index: 1;
-}
-.nieuws__carousssel {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    scroll-snap-type: x mandatory; /* Enable scroll snapping */
-    white-space: nowrap; /* Prevent items from wrapping */
-    padding: 1rem;
-    POSITION: RELATIVE;
-    z-index: 5;
-
-}
-
-.nieuws__filter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-
-}
-
-.nieuws__link {
-    color: var(--color-black);
-    text-decoration: none;
-    padding: 0.4em;
-    border: solid var(--color-black) 3px;
-    background-color: white;
-}
-
 .imageBNR {
     width: 70%;
     height: auto;
@@ -531,10 +468,117 @@ H1{
 /*    }*/
 
 /*}*/
-/*articles
 
 
-*/
+/*dit is het blok met het nieuws*/
+
+
+.divniews{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+
+    margin: 0 auto;
+}
+.nieuws {
+    /*background-color: var(--yellow);*/
+    position: relative;
+    overflow: hidden;
+    transition: color .5s linear;
+    background-color: var(--yellow) 50%, var(--white) 50%;
+    background-size: 100% 100%; /* Ensures colors fill the entire section */
+    background-position: 0 0;
+
+}
+
+.nieuws__h1{
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+.nieuws__yellowBackground{
+    /*content: "";*/
+    /*position: absolute; !* Positions the element on top of the section *!*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+
+
+    background-color: var(--yellow);
+
+
+    width: 490px;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s linear;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 384px;
+    height: 100%;
+    transition: background-color .5s linear;
+
+
+
+
+}
+.nieuws__yellowBackground:after{
+    content: "";
+    position: absolute;
+    top: 42px;
+    height: 100%;
+    right: 0;
+    left: 283px;
+    background: var(--white);
+    width: 202px;
+    height: 202px;
+    transform: rotate(45deg);
+}
+/*.nieuws__yellowBackground{*/
+/*    background-color: var(--yellow);*/
+/*    z-index: -1;*/
+/*    width: 384px;*/
+/*    height: 100%;*/
+/*    transition: background-color .5s linear;*/
+
+/*}*/
+H1{
+    position: relative;
+    z-index: 1;
+}
+.nieuws__carousssel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+    white-space: nowrap; /* Prevent items from wrapping */
+    padding: 1rem;
+    POSITION: RELATIVE;
+    z-index: 5;
+
+}
+
+.nieuws__filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.nieuws__link {
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 0.4em;
+    border: solid var(--color-black) 3px;
+    background-color: white;
+}
+
+/*hier beginnen de articles*/
 .sectionArticles {
     display: grid;
     grid-template-columns: 1fr;
@@ -609,7 +653,7 @@ H1{
     /*grid-row-end: 2;*/
 }
 
-
+/*hier beginnen de media queries*/
 @media (min-width: 400px) {
 
 
