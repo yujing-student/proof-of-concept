@@ -1,5 +1,4 @@
  playing()
-hamburger()
 
 function playing() {
   // Get the video
@@ -23,16 +22,3 @@ function playing() {
     playButton.addEventListener('click', togglePlayPause);
 }
 
-function hamburger (){
-    let eersteStreepjesButton = document.querySelector("section.streepjes li:nth-of-type(1) button");
-    eersteStreepjesButton.onclick = eersteStreepjesButtonKlik;
-    function eersteStreepjesButtonKlik() {
-        if (eersteStreepjesButton.ariaExpanded == "false") {
-            eersteStreepjesButton.ariaExpanded = "true"
-        }
-        else {
-            eersteStreepjesButton.ariaExpanded = "false"
-        }
-    }
-    eersteStreepjesButtonKlik();
-}
