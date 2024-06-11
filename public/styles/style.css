@@ -252,10 +252,12 @@ li {
 #menu {
     position: absolute;
     /*z-index: 5;*/
-    width: 300px;
+    width: 400px;
     margin: -72px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
+    display: flex;
+    flex-direction: column;
 
     background: var(--color-black);
     list-style-type: none;
@@ -283,6 +285,16 @@ li {
 
 /*einde codepen voorbeeld*/
 
+nav li a {
+    display: inline;
+    padding: 0 1em;
+    color: var(--white);
+    text-decoration: none;
+}
+.iconsDesktop{
+    position: absolute;
+    left: -999%;
+}
 
 body {
     font-family: "plusJakarta", sans-serif;
@@ -409,6 +421,14 @@ H1{
     padding: 0.4em;
     border: solid var(--color-black) 3px;
     background-color: white;
+}
+
+.imageBNR {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 2em;
+    display: grid;
 }
 
 /*audiobutton*/
@@ -597,6 +617,13 @@ H1{
 
 @media (min-width: 768px) {
 
+    .imageBNR {
+        width: 700px;
+        height: auto;
+        object-fit: cover;
+        margin-top: 2em;
+        display: grid;
+    }
 
     .articles {
         /*grid-template-columns: 15em 1fr;*/
@@ -627,6 +654,13 @@ H1{
 
 /*score */
 @media (min-width: 1200px) {
+    .iconsDesktop{
+           position: relative;
+            left: 0;
+    }
+    #menuToggle {
+        display: none;
+    }
 
 }
 
