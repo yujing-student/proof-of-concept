@@ -335,7 +335,7 @@ body {
 .gridcontainter {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    row-gap: 5em;
     padding: 1rem;
 }
 
@@ -369,6 +369,16 @@ body {
     object-fit: cover;
     margin-top: 2em;
     display: grid;
+}
+.plaubuttonvolume{
+    margin:  0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+}
+.volume{
+    rotate: 269deg;
+    grid-column-start: 2;
 }
 
 /*audiobutton*/
@@ -500,7 +510,7 @@ body {
 .divniews{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+   row-gap: 5em;
     padding: 1rem;
 
     margin: 0 auto;

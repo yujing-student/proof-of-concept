@@ -28,22 +28,22 @@
 <!--                  fill="#FFD200"></path>-->
 <!--        </svg>-->
 
-
-        <div>
-            <input type="range" class="volume" name="volume" min="0" max="10" />
-            <label for="volume">Volume</label>
-        </div>
-        <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
-                aria-label="this is the button to start teh playlist">
-            <audio controls class="audio ">
-                <source src="<%= audioUrl %>">
-            </audio>
-            <div class="pauzebutton ">
-            </div>
-        </button>
-
-
     </section>
+        <div class="plaubuttonvolume">
+            <input type="range" class="volume" name="volume" min="0" max="10" />
+            <label for="volume" class="volume"></label>
+
+            <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
+                    aria-label="this is the button to start teh playlist">
+                <audio controls class="audio ">
+                    <source src="<%= audioUrl %>">
+                </audio>
+                <div class="pauzebutton ">
+                </div>
+            </button>
+        </div>
+
+
     <a  href="#top" class="backToTop ">
         <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 8l1.41 1.41L7 3.83V16h2V3.83l5.59 5.58L16 8 8 0 0 8z" fill="#fff"></path>
@@ -72,14 +72,8 @@
         <section class="sectionArticles">
             <% firstTenArticles.forEach(article => { %>
                 <article class="articles">
-
-                    <div class="article__informatoon">
-
-
-                    </div>
                     <h2 class="article__title"><%= article.title %></h2>
                     <p class="article__text"><%= article.introduction %></p>
-
                     <% if (article.photo) { %>
                         <picture>
                             <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=avif"
@@ -96,7 +90,6 @@
                             >
                         </picture>
                     <% } %>
-
                 </article>
             <% }) %>
 
