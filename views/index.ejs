@@ -28,20 +28,23 @@
                   fill="#FFD200"></path>
         </svg>
 
-        <div class="fixednavbar">
 
-            <button class="playbutton" name="playlistbutton" role="button" aria-label="this is the button to start teh playlist">
-                <audio controls class="audio">
-                    <source src="<%= audioUrl %>">
-                </audio>
-                <div class="pauzebutton">
-                </div>
-            </button>
-
-        </div>
+        <button class="playbutton" name="playlistbutton" role="button"
+                aria-label="this is the button to start teh playlist">
+            <audio controls class="audio">
+                <source src="<%= audioUrl %>">
+            </audio>
+            <div class="pauzebutton">
+            </div>
+        </button>
 
 
     </section>
+    <a class="backToTop ">
+        <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 8l1.41 1.41L7 3.83V16h2V3.83l5.59 5.58L16 8 8 0 0 8z" fill="#fff"></path>
+        </svg>
+    </a>
     <div class="divniews">
         <section class="nieuws">
 
@@ -95,7 +98,6 @@
 
         </section>
     </div>
-
 
 
 </main>

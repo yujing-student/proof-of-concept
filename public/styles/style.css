@@ -469,6 +469,18 @@ body {
 
 /*}*/
 
+.backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 99;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    line-height: 0;
+    bottom: 100px;
+}
 
 /*dit is het blok met het nieuws*/
 
@@ -577,8 +589,6 @@ H1{
     border: solid var(--color-black) 3px;
     background-color: white;
 }
-
-/*hier beginnen de articles*/
 .sectionArticles {
     display: grid;
     grid-template-columns: 1fr;
@@ -653,7 +663,7 @@ H1{
     /*grid-row-end: 2;*/
 }
 
-/*hier beginnen de media queries*/
+
 @media (min-width: 400px) {
 
 
