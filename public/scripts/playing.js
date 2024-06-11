@@ -1,5 +1,5 @@
  playing()
-
+ volume()
 function playing() {
   // Get the video
     const audio = document.querySelector('.audio'); // Use querySelector for efficiency
@@ -22,3 +22,11 @@ function playing() {
     playButton.addEventListener('click', togglePlayPause);
 }
 
+ function volume () {
+     const volume = document.querySelector('.volume');
+     const audio = document.querySelector('.audio');
+
+     volume.addEventListener('input', function() {
+         audio.volume = volume.value / 10;
+     });
+ }
