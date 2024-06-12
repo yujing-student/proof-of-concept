@@ -17,6 +17,10 @@ const carrousel = document.querySelector(".news ul");
 const itemWidth = document.querySelector(".news li");
 const paginationWrapper = document.querySelector('.news .button-container');
 
+// Vacatures
+const vacancyContainer = document.querySelector('.vacancy-container');
+const vacancies = document.querySelectorAll('.vacancy');
+
 // ----- Code logic -----
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -30,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
     // Counter
-    
+
     if (counters) {
         counters.forEach(counter => {
             // Reset counter to 0 for animation
@@ -81,9 +85,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         });
     }
-    
-    const vacancyContainer = document.querySelector('.vacancy-container');
-    const vacancies = document.querySelectorAll('.vacancy');
+
+    // Dynamische hoogt vacatures berekenen
     
     if (vacancies.length > 0) {
         const firstVacancy = vacancies[0];
@@ -99,5 +102,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Set the max-height of the list-view container
         document.querySelector('.list-view-container').style.maxHeight = `${maxHeight}px`;
     }
+
+    const logoList = document.querySelector('.members ul');
+    const logos = Array.from(logoList.children);
+    const numLogos = logos.length;
+
+    // Clone logos and append to the end for seamless scroll
+    logos.forEach(logo => {
+        logoList.appendChild(logo.cloneNode(true));
+    });
+
+    // Calculate and set the width of the logo list
+    const logoWidth = logos[0].offsetWidth;
+    const totalWidth = logoWidth * numLogos * 2; // Twice for the cloned set
+    logoList.style.width = `${totalWidth}px`;
+
+    // Set animation duration based on total width
+    const animationSpeed = totalWidth / 100; // Adjust this value for desired speed
+    logoList.style.animationDuration = `${animationSpeed}s`;
 
 });

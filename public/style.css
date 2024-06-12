@@ -118,6 +118,9 @@ img {
     overflow: hidden;
 }
 
+.button-container svg path {
+    fill: var(--primary-light);
+}
 /* ----------- Header ----------- */
 
 /* Navigatie */
@@ -306,9 +309,9 @@ h1 {
     width: 100%;
 }
 
-.news svg path {
-    fill: white;
-}
+    /* .news svg path {
+        fill: white;
+    } */
 
 .news .button-container {
     display: none;
@@ -317,7 +320,8 @@ h1 {
     margin-bottom: var(--heading-spacing);
 }
 
-.js-enabled .news .button-container {
+.js-enabled .news .button-container,
+.js-enabled .events .button-container {
     display: flex;
 }
 
@@ -328,7 +332,6 @@ h1 {
     flex-direction: column;
     width: 100%;
 }
-
 
 .vacancies .list-view-container{
     max-height: 460px;
@@ -353,6 +356,19 @@ h1 {
     background: var(--gradient-02);
     border-radius: var(--radius-01);
     scroll-snap-align: center;
+}
+
+.vacancies .empty-state {
+    background: #44446b96;
+    text-align: center;
+    width: 100%;
+    padding: 4rem;
+    border-radius: var(--radius-01);
+}
+
+.vacancies .empty-state p {
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .vacancies a {
@@ -422,14 +438,66 @@ h1 {
 }
 
 .events ul {
-    display: flex;
-    flex-direction: column;
     gap: calc(var(--spacing) * 2 );
     margin-bottom: var(--heading-spacing);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), auto);
+}
+
+@supports (animation-timeline: view()) {
+    .events ul {
+        --numcards: 4;
+        view-timeline-name: --cards-element-scrolls-in-body;
+    }
+}
+
+.event-content {
+    transform-origin: 50% 0%;
+    will-change: transform;
+}
+
+@supports (animation-timeline: view()) {
+    .event-content {
+        --start-range: calc(var(--index0) / var(--numcards) * 100%);
+        --end-range: calc((var(--index)) / var(--numcards) * 100%);
+        animation: linear scale forwards;
+        animation-timeline: --cards-element-scrolls-in-body;
+        animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+    }
+}
+
+@keyframes scale {
+100% {
+    transform: scale(calc(1.1 - calc(0.1* var(--reverse-index))));
+    }
 }
 
 .events li {
     max-width: 30rem;
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index)* 1em);
+}
+
+.events li:first-of-type {
+    --index: 1;
+}
+
+.events li:nth-of-type(2) {
+    --index: 2;
+}
+
+.events li:last-of-type {
+    --index: 3;
+}
+
+@supports (animation-timeline: view()) {
+    .events li {
+        --index0: calc(var(--index) - 1);
+        --reverse-index: calc(var(--numcards) - var(--index0));
+        --reverse-index0: calc(var(--reverse-index) - 1);
+    }
 }
 
 .events .image-container {
@@ -484,14 +552,41 @@ h1 {
 .members .logo-container {
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before,
+	&::after {
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+        background: linear-gradient(to right,  rgb(0, 0, 0) 0%,rgba(255,255,255,0) 100%);
+    };
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
 }
 
 .members ul {
     display: flex;
     gap: var(--spacing);
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    /* overflow-x: scroll;
+    scroll-snap-type: x mandatory; */
     margin-bottom: var(--heading-spacing);
+    animation: scroll linear infinite;
+    /* width: calc(6rem * 14); */
+    white-space: nowrap;
 }
 
 .members li {
@@ -502,6 +597,7 @@ h1 {
     display: block;
     width: 6rem;
     height: 6rem;
+    object-fit: contain;
 }
 
 .members .to-members {
@@ -509,6 +605,15 @@ h1 {
     background: var(--gradient-01);
     border-radius: var(--radius-01);
     text-align: center;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 /* ----------- Footer ----------- */
@@ -593,6 +698,7 @@ footer .socials {
 @supports (scrollbar-width: none) {
     .news ul,
     .vacancies ul,
+    .events ul,
     .members ul,
     .vacancies .list-view {
       scrollbar-width: none;
@@ -659,13 +765,59 @@ footer .socials {
         margin-right: auto;
     }
 
+    .events .event-content-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        transform-origin: 0%;
+        will-change: auto;
+        /* gap: calc(var(--spacing) * 2); */
+    }
+
+    .event-content {
+        animation: none;
+    }
+
     .events ul {
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        grid-column: 1/4;
+        gap: calc(var(--spacing) * 2 );
+    }
+
+    .events li {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        position: relative;
+        max-width: none;
+        padding: 0;
+    }
+
+    .events img {
+        min-height: 20rem;
+        /* max-height: 50rem; */
+    }
+
+    .events .image-container {
+        max-width: 30rem;
+    }
+
+    .events .button-container {
+        grid-column: 3;
+        grid-row: 2;
+        margin: 0;
+        display: none;
+        justify-content: center;
+        gap: calc(var(--spacing) * 2 );
     }
 
     .events .to-events {
         width: 20rem;
-        margin: 0 auto;
+        /* margin: 0 auto; */
+        grid-column: 1;
+        grid-row: 2;
     }
 
     /* Members */
@@ -898,7 +1050,7 @@ footer .socials {
     }
 
     .events h2 {
-        text-align: center;
+        /* text-align: center; */
         margin-bottom: 0;
     }
 
@@ -908,16 +1060,22 @@ footer .socials {
 
     .events .events-intro {
         max-width: 40rem;
-        margin: 0 auto; 
+        /* margin: 0 auto;  */
     }
 
-    .events ul {
-        margin: 0 auto;
+    .events .event-content-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: calc(var(--spacing) * 4);
     }
 
-    .events li {
+    /* .events li {
+        position: relative;
         max-width: none;
-    }
+        padding: 0; */
+        /* flex-shrink: 0; */
+        /* scroll-snap-align: center; */
+        /* width: fit-content; */
+    /* } */
 
     .events a {
         display: inline-block;
@@ -929,9 +1087,13 @@ footer .socials {
         height: auto;
     }
 
+    .events .button-container {
+        grid-column: 2;
+    }
+
     .events .to-events {
         width: 20rem;
-        margin: 0 auto;
+        /* margin: 0 auto; */
     }
 
     /* onze leden */
