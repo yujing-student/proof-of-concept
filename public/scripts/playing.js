@@ -11,11 +11,13 @@ function playing() {
         if (audio.paused) {
             console.log('video is playing')
             audio.play();
+            playButton.classList.remove('grow')
             pausebutton.classList.add('pauzebutton-open');
             playButton.classList.remove(playButton);
             playButton.classList.remove('pauzebutton');
         } else {
             audio.pause();
+            playButton.classList.add('grow')
             pausebutton.classList.remove('pauzebutton-open');
         }
     }

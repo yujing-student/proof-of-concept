@@ -409,6 +409,7 @@ body {
     margin: 0 auto;
     margin-top: 1em;
     margin-bottom: 1em;
+    grid-column: 1;
 }
 
 
@@ -455,39 +456,39 @@ body {
 /*    border-radius: 50%;*/
 /*}*/
 
-@keyframes pulse {
-    0% {
-        /*top: calc(50% - 35px);*/
-        /*left: calc(50% - 35px);*/
-        width: 44px;
-        height: 44px;
-        opacity: 1;
-        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 124, 223, 0) 0%,
-        rgba(0, 46, 223, 0) 61.46%, rgba(238, 160, 46, 0.5) 70.31%, #eea02e 100%);
-    }
+/*@keyframes pulse {*/
+/*    0% {*/
+/*        !*top: calc(50% - 35px);*!*/
+/*        !*left: calc(50% - 35px);*!*/
+/*        width: 44px;*/
+/*        height: 44px;*/
+/*        opacity: 1;*/
+/*        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 124, 223, 0) 0%,*/
+/*        rgba(0, 46, 223, 0) 61.46%, rgba(238, 160, 46, 0.5) 70.31%, #eea02e 100%);*/
+/*    }*/
 
 
-    66% {
-        /*top: calc(50% - 90px / 2);*/
-        /*left: calc(50% - 90px / 2);*/
-        width: 90px;
-        height: 90px;
-        opacity: 0;
-        background: radial-gradient(50% 50% at 50% 50%,
-        rgba(0, 124, 223, 0) 0%, rgba(0, 46, 223, 0) 61.46%,
-        rgba(253, 170, 54, 0.5) 70.31%, #007CDF 100%);
-    }
-    100%{
-        opacity: 0;
-    }
+/*    66% {*/
+/*        !*top: calc(50% - 90px / 2);*!*/
+/*        !*left: calc(50% - 90px / 2);*!*/
+/*        width: 90px;*/
+/*        height: 90px;*/
+/*        opacity: 0;*/
+/*        background: radial-gradient(50% 50% at 50% 50%,*/
+/*        rgba(0, 124, 223, 0) 0%, rgba(0, 46, 223, 0) 61.46%,*/
+/*        rgba(253, 170, 54, 0.5) 70.31%, #007CDF 100%);*/
+/*    }*/
+/*    100%{*/
+/*        opacity: 0;*/
+/*    }*/
 
-}
+/*}*/
 
 /*hier begint de startknop*/
 
 .grow {
    animation: grow 2s ease infinite;
-    grid-column: 1;
+
 }
 @keyframes grow {
     from { transform: scale(1); }
@@ -574,14 +575,7 @@ body {
     height: 202px;
     transform: rotate(45deg);
 }
-/*.nieuws__yellowBackground{*/
-/*    background-color: var(--yellow);*/
-/*    z-index: -1;*/
-/*    width: 384px;*/
-/*    height: 100%;*/
-/*    transition: background-color .5s linear;*/
 
-/*}*/
 H1{
     position: relative;
     z-index: 1;
