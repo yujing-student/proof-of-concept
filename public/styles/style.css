@@ -443,17 +443,17 @@ body {
 
 /*dit word onderdeel van een animatie zie skyradio als voorbeeld*/
 
-.playbutton :after {
+/*.playbutton :after {*/
 
-    width: 70px;
-    height: 70px;
-    content: "";
-    z-index: 1;
-    position: absolute;
-    animation: 1.8s ease-out 0s infinite normal none running pulse;
-    background: var(--yellow);
-    border-radius: 50%;
-}
+/*    width: 70px;*/
+/*    height: 70px;*/
+/*    content: "";*/
+/*    z-index: 1;*/
+/*    position: absolute;*/
+/*    animation: 1.8s ease-out 0s infinite normal none running pulse;*/
+/*    background: var(--yellow);*/
+/*    border-radius: 50%;*/
+/*}*/
 
 @keyframes pulse {
     0% {
@@ -486,7 +486,7 @@ body {
 /*hier begint de startknop*/
 
 .grow {
-    /*animation: grow 2s ease infinite;*/
+   animation: grow 2s ease infinite;
     grid-column: 1;
 }
 @keyframes grow {
@@ -598,6 +598,7 @@ H1{
     POSITION: RELATIVE;
     z-index: 5;
 
+
 }
 
 .nieuws__filter {
@@ -633,6 +634,7 @@ H1{
     /*border-bottom: solid var(--gray-border) 1px;*/
     height: 100%;
     transition: background-color .2s ease-in-out;
+    padding-top: 2em;
 
 }
 
@@ -706,6 +708,18 @@ H1{
         display: grid;
     }
 
+    /*.nieuws__carousssel:not(:empty) {*/
+    /*    overflow-y: auto; !* Show scrollbar only when content exists *!*/
+    /*}*/
+    .nieuws__carousssel{
+        overflow: hidden;
+    }
+
+    .iconsDesktop{
+        flex-shrink: 1;,
+        flex: 1 0 auto;
+    }
+
     .articles {
         /*grid-template-columns: 15em 1fr;*/
         border: 1px solid var(--gray-border);
@@ -735,9 +749,20 @@ H1{
 
 /*score */
 @media (min-width: 1200px) {
+    .nav{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--color-black);
+
+    }
     .iconsDesktop{
            position: relative;
             left: 0;
+    }
+    .icon{
+        margin-left: 40em;
     }
     #menuToggle {
         display: none;
