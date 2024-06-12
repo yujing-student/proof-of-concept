@@ -196,7 +196,7 @@ li {
 /*
  * Just a quick hamburger
  */
-#menuToggle span {
+#menuToggle ,.hamburger {
     display: block;
     width: 33px;
     height: 4px;
@@ -305,6 +305,17 @@ li {
     color: var(--white);
 }
 
+nav li svg{
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-column: 1;
+    grid-row: 1;
+}
+nav li span{
+    grid-column: 2;
+    grid-row: 1;
+}
+
 /*
  * And let's slide it in from the left
  */
@@ -325,18 +336,18 @@ nav li a {
     left: -999%;
 }
 
-body {
-    font-family: "plusJakarta", sans-serif;
-    font-size: 16px;
-    line-height: 1.5em;
-    color: var(--color-black);
-}
-
 .gridcontainter {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 5em;
     padding: 1rem;
+}
+
+.intro{
+    padding: 1rem;
+    margin: 0 auto;
+
+    line-height: 1.5em;
 }
 
 .imageBNR {
@@ -441,51 +452,6 @@ body {
     left: -1px;
 }
 
-
-/*dit word onderdeel van een animatie zie skyradio als voorbeeld*/
-
-/*.playbutton :after {*/
-
-/*    width: 70px;*/
-/*    height: 70px;*/
-/*    content: "";*/
-/*    z-index: 1;*/
-/*    position: absolute;*/
-/*    animation: 1.8s ease-out 0s infinite normal none running pulse;*/
-/*    background: var(--yellow);*/
-/*    border-radius: 50%;*/
-/*}*/
-
-/*@keyframes pulse {*/
-/*    0% {*/
-/*        !*top: calc(50% - 35px);*!*/
-/*        !*left: calc(50% - 35px);*!*/
-/*        width: 44px;*/
-/*        height: 44px;*/
-/*        opacity: 1;*/
-/*        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 124, 223, 0) 0%,*/
-/*        rgba(0, 46, 223, 0) 61.46%, rgba(238, 160, 46, 0.5) 70.31%, #eea02e 100%);*/
-/*    }*/
-
-
-/*    66% {*/
-/*        !*top: calc(50% - 90px / 2);*!*/
-/*        !*left: calc(50% - 90px / 2);*!*/
-/*        width: 90px;*/
-/*        height: 90px;*/
-/*        opacity: 0;*/
-/*        background: radial-gradient(50% 50% at 50% 50%,*/
-/*        rgba(0, 124, 223, 0) 0%, rgba(0, 46, 223, 0) 61.46%,*/
-/*        rgba(253, 170, 54, 0.5) 70.31%, #007CDF 100%);*/
-/*    }*/
-/*    100%{*/
-/*        opacity: 0;*/
-/*    }*/
-
-/*}*/
-
-/*hier begint de startknop*/
-
 .grow {
    animation: grow 2s ease infinite;
 
@@ -533,6 +499,12 @@ body {
 .nieuws__h1{
     padding-left: 0.5em;
     padding-top: 0.5em;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.2;
+    display: grid;
+    justify-content: center;
 }
 
 .nieuws__yellowBackground{
@@ -579,8 +551,6 @@ body {
 H1{
     position: relative;
     z-index: 1;
-    display: grid;
-    justify-content: center;
 }
 .nieuws__carousssel {
     display: flex;
@@ -722,7 +692,7 @@ H1{
 
     .sectionArticles {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(430px, 0));
+        grid-template-columns: repeat(auto-fit, minmax(390px, 0));
 
 
         gap: 2em;
@@ -743,21 +713,40 @@ H1{
 
 /*score */
 @media (min-width: 1200px) {
-    .nav{
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 1rem 2rem;
-        background-color: var(--color-black);
+    /*.nav{*/
+    /*    display: flex;*/
+    /*    justify-content: flex-start;*/
+    /*    align-items: center;*/
+    /*    padding: 1rem 2rem;*/
+    /*    background-color: var(--color-black);*/
 
+    /*}*/
+    .nav li{
+        display:  grid;
+        grid-template-columns: auto auto;
+        column-gap: 1em;
     }
     .iconsDesktop{
            position: relative;
             left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1em;
     }
+    nav li a {
+        display: grid;
+
+        grid-row: 1;
+        grid-column-gap: 0.5em;
+    }
+
     .icon{
-        margin-left: 40em;
+
+        margin-left: auto;
+        display: grid;
+        justify-self: end;
     }
+
     #menuToggle {
         display: none;
     }
