@@ -375,6 +375,7 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: auto auto;
+    /*grid-template-rows: 5em 5em;*/
 }
 .volume{
     rotate: 269deg;
@@ -442,17 +443,18 @@ body {
 
 /*dit word onderdeel van een animatie zie skyradio als voorbeeld*/
 
-/*.playbutton:before {*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 70px;*/
-/*    height: 70px;*/
-/*    content: "";*/
-/*    z-index: 1;*/
-/*    position: absolute;*/
-/*    animation: 1.8s ease-out 0s infinite normal none running pulse;*/
-/*    background: var(--yellow);*/
-/*}*/
+.pleasurable:after {
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    content: "";
+    z-index: 1;
+    position: absolute;
+    animation: 1.8s ease-out 0s infinite normal none running pulse;
+    background: var(--yellow);
+    border-radius: 50%;
+}
 
 @keyframes pulse {
     0% {
@@ -466,7 +468,7 @@ body {
     }
 
 
-    60% {
+    66% {
         top: calc(50% - 90px / 2);
         left: calc(50% - 90px / 2);
         width: 90px;
@@ -482,9 +484,11 @@ body {
 
 }
 
+/*hier begint de startknop*/
 
 .grow {
     animation: grow 2s ease infinite;
+    grid-column: 1;
 }
 @keyframes grow {
     from { transform: scale(1); }
