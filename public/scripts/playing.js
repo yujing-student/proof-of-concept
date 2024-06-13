@@ -7,20 +7,16 @@ volume()
 playButton.addEventListener('click', togglePlayPause);
 
 // Check if Javascript is disabled
-if (!window.script) { // Assuming 'window.script' is not defined when JS is disabled
-    audio.classList.add('audio-hidden'); // Hide pause button
+if (!window.script) {
+    audio.classList.add('audio-hidden');
 }
 function togglePlayPause() {
 
 
     if (window.Audio) {
-        audio.classList.remove('audio-hidden')
-        // playButton.classList.remove('playbutton')
-        audio.classList.add('audio-script-enabled');
         if (audio.paused) {
             console.log('video is playing')
             audio.play();
-            audio.classList.add('audio-open')
 
             if (document.startViewTransition) {
                 document.startViewTransition(function () {

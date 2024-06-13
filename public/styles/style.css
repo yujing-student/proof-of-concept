@@ -425,49 +425,6 @@ label {
     accent-color: var(--yellow);
 }
 
-/*audiobutton*/
-
-/*.audio {*/
-/*    position: absolute;*/
-/*    width: 8em;*/
-/*    top: 6em;*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    left: -9999px;*/
-/*}*/
-
-@media (scripting: none) {
-    .audio {
-        position: absolute;
-        width: 16em;
-        top: 6em;
-        top: 0;
-        width: 100%;
-        /*left: -9999px;*/
-    }
-}
-
-@media (scripting: initial-only) {
-        .audio {
-            position: absolute;
-            width: 16em;
-            top: 0;
-        }
-
-}
-/*@media (scripting: enabled) {*/
-
-/*    .audio {*/
-/*        position: absolute;*/
-/*        width: 16em;*/
-/*        !*top: 6em;*!*/
-/*        top: 8em;*/
-/*        left: 65em;*/
-/*        !*met 999 haal je de audio weg*!*/
-/*        !*left: -9999px;*!*/
-/*    }*/
-
-/*}*/
 .audio-hidden {
     position: absolute;
     width: 16em;
@@ -477,12 +434,15 @@ label {
 }
 
 /*todo oplossing bedenken voor als javascirpt uit staat*/
-.audio-open {
-    top: 0;
-    width: 100%;
-    left: -9999px;
-    /*display:none;*/
-}
+/*.audio{*/
+/*    top: 3em;*/
+/*    position: absolute;*/
+/*    left: 46em;*/
+/*    width: 16em;*/
+
+
+/*    !*display:none;*!*/
+/*}*/
 
 .playbutton {
     position: relative;
