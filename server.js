@@ -31,8 +31,7 @@ app.get('/', (request, response) => {
         .then(articles => {
             const firstTenArticles = articles.slice(0, 10)
             response.render('index', {
-                firstTenArticles,
-                audioUrl,
+                firstTenArticles, audioUrl,
             });
         })
 })
