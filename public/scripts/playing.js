@@ -8,28 +8,37 @@ playButton.addEventListener('click', togglePlayPause);
 
 
 function togglePlayPause() {
-    if (audio.paused) {
-        console.log('video is playing')
-        audio.play();
+    if (window.Audio) {
+        audio.classList.remove('audio-hidden')
+        audio.classList.add('audio-script-enabled');
+        if (audio.paused) {
+            console.log('video is playing')
+            audio.play();
+            audio.classList.add('audio-open')
 
-        if (document.startViewTransition) {
-            document.startViewTransition(function () {
+            if (document.startViewTransition) {
+                document.startViewTransition(function () {
+                    playButton.classList.remove('grow')
+                    pausebutton.classList.add('pauzebutton-open');
+                    playButton.classList.remove('pauzebutton');
+                });
+            } else {
                 playButton.classList.remove('grow')
                 pausebutton.classList.add('pauzebutton-open');
                 playButton.classList.remove('pauzebutton');
-            });
+            }
+
+
         } else {
-            playButton.classList.remove('grow')
-            pausebutton.classList.add('pauzebutton-open');
-            playButton.classList.remove('pauzebutton');
+            audio.pause();
+            playButton.classList.add('grow')
+            pausebutton.classList.remove('pauzebutton-open');
         }
-
-
+        audio.classList.add('audio-open')
     } else {
-        audio.pause();
-        playButton.classList.add('grow')
-        pausebutton.classList.remove('pauzebutton-open');
+
     }
+
 }
 
 function volume() {
@@ -38,6 +47,7 @@ function volume() {
         audio.volume = volumeInput.value / 10;
     });
 }
+
 
 
 // deze functie werkt niet het idee is dat het pijltje aan de zijkant pas zichtbaar is als je naar beneden scrollt

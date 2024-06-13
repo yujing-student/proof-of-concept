@@ -426,8 +426,55 @@ label {
 }
 
 /*audiobutton*/
-.audio {
+
+/*.audio {*/
+/*    position: absolute;*/
+/*    width: 8em;*/
+/*    top: 6em;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    left: -9999px;*/
+/*}*/
+
+@media (scripting: none) {
+    .audio {
+        position: absolute;
+        width: 16em;
+        top: 6em;
+        top: 0;
+        width: 100%;
+        /*left: -9999px;*/
+    }
+}
+
+@media (scripting: initial-only) {
+        .audio {
+            position: absolute;
+            width: 16em;
+            top: 0;
+        }
+
+}
+@media (scripting: enabled) {
+
+    .audio {
+        position: absolute;
+        width: 16em;
+        /*top: 6em;*/
+        top: 5em;
+        /*left: -9999px;*/
+    }
+
+}
+.audio-hidden {
     position: absolute;
+    width: 8em;
+    top: 6em;
+    left: -9999px;
+}
+
+/*todo oplossing bedenken voor als javascirpt uit staat*/
+.audio-open {
     top: 0;
     width: 100%;
     left: -9999px;

@@ -28,6 +28,7 @@
 
 
     </section>
+    <p>als de gele knop niet werkt dan staat  javascript uit en kan je op de witte playlist drukken en werkt de gele knop wel dan gaat de playlist weg</p>
     <div class="playlist">
 
         <button class="playlist__icon">
@@ -52,12 +53,14 @@
 
         <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
                 aria-label="this is the button to start teh playlist">
-            <audio controls class="audio">
-                <source src="<%= audioUrl %>">
-            </audio>
             <span class="pauzebutton ">
                 </span>
         </button>
+
+        <audio controls class="audio">
+            <p>deze audio zie je als javascript uit staat</p>
+            <source src="<%= audioUrl %>">
+        </audio>
     </div>
 
 
@@ -139,3 +142,14 @@
 </main>
 
 <%- include('./partials/foot') %>
+<noscript>
+    <style type="text/css">
+        .audio {
+            position: absolute;
+            width: 8em;
+            top: 6em;
+            top: 0;
+            /*display:none;*/
+        }
+    </style>
+</noscript>
