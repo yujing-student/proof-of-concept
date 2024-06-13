@@ -11,11 +11,13 @@ const counters = document.querySelectorAll('.value');
 const speed = 500;
 
 //Carrousel
-const prevButton = document.querySelector(".news .button-container button[aria-label='vorige']");
-const nextButton = document.querySelector(".news .button-container button[aria-label='volgende']");
-const carrousel = document.querySelector(".news ul");
-const itemWidth = document.querySelector(".news li");
-const paginationWrapper = document.querySelector('.news .button-container');
+const prevButtons = document.querySelectorAll(".button-container button[aria-label='vorige']");
+const nextButtons = document.querySelectorAll(".button-container button[aria-label='volgende']");
+const carrouselNews = document.querySelector(".news ul");
+const itemWidthNews = document.querySelector(".news li");
+const carrouselEvents = document.querySelector(".events ul")
+const itemWidthEvents = document.querySelector(".events li")
+const paginationWrapper = document.querySelector('.button-container');
 
 // Vacatures
 const vacancyContainer = document.querySelector('.vacancy-container');
@@ -66,25 +68,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Carrousel
 
-    if (carrousel && prevButton && nextButton && itemWidth && paginationWrapper) {
+    prevButtons.forEach(prevButton => {
         prevButton.addEventListener("click", function () {
-            if (carrousel.scrollLeft > 0) {
-                carrousel.scrollBy({
-                    left: -itemWidth.offsetWidth,
+            if (carrouselNews && carrouselNews.scrollLeft > 0) {
+                carrouselNews.scrollBy({
+                    left: -itemWidthNews.offsetWidth,
+                    behavior: "smooth",
+                });
+            }
+            if (carrouselEvents && carrouselEvents.scrollLeft > 0) {
+                carrouselEvents.scrollBy({
+                    left: -itemWidthEvents.offsetWidth,
                     behavior: "smooth",
                 });
             }
         });
-
+    });
+    
+    nextButtons.forEach(nextButton => {
         nextButton.addEventListener("click", function () {
-            if (carrousel.scrollLeft + carrousel.clientWidth < carrousel.scrollWidth) {
-                carrousel.scrollBy({
-                    left: itemWidth.offsetWidth,
+            if (carrouselNews && carrouselNews.scrollLeft + carrouselNews.clientWidth < carrouselNews.scrollWidth) {
+                carrouselNews.scrollBy({
+                    left: itemWidthNews.offsetWidth,
+                    behavior: "smooth",
+                });
+            }
+            if (carrouselEvents && carrouselEvents.scrollLeft + carrouselEvents.clientWidth < carrouselEvents.scrollWidth) {
+                carrouselEvents.scrollBy({
+                    left: itemWidthEvents.offsetWidth,
                     behavior: "smooth",
                 });
             }
         });
-    }
+    });
 
     // Dynamische hoogt vacatures berekenen
     
