@@ -433,16 +433,7 @@ label {
     left: -9999px;
 }
 
-/*todo oplossing bedenken voor als javascirpt uit staat*/
-/*.audio{*/
-/*    top: 3em;*/
-/*    position: absolute;*/
-/*    left: 46em;*/
-/*    width: 16em;*/
 
-
-/*    !*display:none;*!*/
-/*}*/
 
 .playbutton {
     position: relative;
@@ -458,9 +449,7 @@ label {
     outline: none;
     transition: all 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em auto;
     grid-column: 1;
     grid-row: 1;
 }
