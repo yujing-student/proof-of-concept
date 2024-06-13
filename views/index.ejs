@@ -27,7 +27,7 @@
         </picture>
     </section>
 
-    <div class="playlist">
+    <div class="playlist" tabindex="0">
 
         <button class="playlist__icon">
 
@@ -40,7 +40,7 @@
                       fill="#FFD200"></path>
             </svg>
         </button>
-        <div class="playlist__div">
+        <div class="playlist__div" tabindex="0">
             <label>
                 <input type="range" class="playlist__inputRange" name="volume" min="0" max="10"/>
             </label>
@@ -51,14 +51,15 @@
 
         <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
                 aria-label="this is the button to start teh playlist">
-            <span class="pauzebutton ">
+
+            <span class="pauzebutton " tabindex="0">
                 </span>
         </button>
-
-        <audio controls class="audio">
+        <audio controls class="audio" tabindex=" 0">
             <p>deze audio zie je als javascript uit staat</p>
             <source src="<%= audioUrl %>">
         </audio>
+
     </div>
 
 
