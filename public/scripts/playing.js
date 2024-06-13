@@ -11,11 +11,25 @@ function playing() {
         if (audio.paused) {
             console.log('video is playing')
             audio.play();
-            playButton.classList.remove('grow')
-            pausebutton.classList.add('pauzebutton-open');
-            playButton.classList.remove(playButton);
-            playButton.classList.remove('pauzebutton');
-        } else {
+
+            if (document.startViewTransition) {
+                document.startViewTransition(function () {
+                    playButton.classList.remove('grow')
+                    pausebutton.classList.add('pauzebutton-open');
+                    playButton.classList.remove(playButton);
+                    playButton.classList.remove('pauzebutton');
+                });
+            }
+            else {
+                playButton.classList.remove('grow')
+                pausebutton.classList.add('pauzebutton-open');
+                playButton.classList.remove(playButton);
+                playButton.classList.remove('pauzebutton');
+            }
+
+
+        }
+        else {
             audio.pause();
             playButton.classList.add('grow')
             pausebutton.classList.remove('pauzebutton-open');
@@ -33,3 +47,19 @@ function playing() {
          audio.volume = volume.value / 10;
      });
  }
+
+
+
+ // deze functie werkt niet
+ function toggleBackToTop() {
+     const backToTop = document.querySelector(".backToTop");
+     const scrollPosition = window.scrollY;
+     const halfPage = document.documentElement.clientHeight / 2;
+
+     if (scrollPosition >= halfPage) {
+         backToTop.classList.add("backToTop-open");
+         backToTop.classList.remove("backToTop");
+     }
+ }
+
+
