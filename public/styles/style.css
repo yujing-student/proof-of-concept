@@ -455,21 +455,24 @@ label {
         }
 
 }
-@media (scripting: enabled) {
+/*@media (scripting: enabled) {*/
 
-    .audio {
-        position: absolute;
-        width: 16em;
-        /*top: 6em;*/
-        top: 5em;
-        /*left: -9999px;*/
-    }
+/*    .audio {*/
+/*        position: absolute;*/
+/*        width: 16em;*/
+/*        !*top: 6em;*!*/
+/*        top: 8em;*/
+/*        left: 65em;*/
+/*        !*met 999 haal je de audio weg*!*/
+/*        !*left: -9999px;*!*/
+/*    }*/
 
-}
+/*}*/
 .audio-hidden {
     position: absolute;
-    width: 8em;
-    top: 6em;
+    width: 16em;
+    top: 8em;
+    /*left: 65em;*/
     left: -9999px;
 }
 

@@ -6,10 +6,16 @@ const volumeInput = document.querySelector('.playlist__inputRange');
 volume()
 playButton.addEventListener('click', togglePlayPause);
 
-
+// Check if Javascript is disabled
+if (!window.script) { // Assuming 'window.script' is not defined when JS is disabled
+    audio.classList.add('audio-hidden'); // Hide pause button
+}
 function togglePlayPause() {
+
+
     if (window.Audio) {
         audio.classList.remove('audio-hidden')
+        // playButton.classList.remove('playbutton')
         audio.classList.add('audio-script-enabled');
         if (audio.paused) {
             console.log('video is playing')
