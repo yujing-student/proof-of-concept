@@ -11,11 +11,12 @@
     --gray40: #D7D2CB66;
     --gray200: #D7D2CB33;
 
-    --gray-border:#e0e0e0;
+    --gray-border: #e0e0e0;
     --white: #ffffff;
 
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -41,6 +42,7 @@ body {
     color: var(--color-black);
 
 }
+
 svg {
     font-size: 1.2em;
     background-color: var(--color-black);
@@ -50,7 +52,8 @@ li {
     list-style: none;
 
 }
-H1{
+
+H1 {
     position: relative;
     z-index: 1;
 
@@ -167,8 +170,6 @@ H1{
 }
 
 
-
-
 #menuToggle input {
     display: block;
     width: 40px;
@@ -188,7 +189,7 @@ H1{
 /*
  * Just a quick hamburger
  */
-#menuToggle ,.hamburger {
+#menuToggle, .hamburger {
     display: block;
     width: 33px;
     height: 4px;
@@ -266,6 +267,7 @@ H1{
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
+
 .navyellobackground {
     position: absolute;
     top: 11px;
@@ -280,6 +282,7 @@ H1{
 
 
     /* Create the yellow half using :after */
+
     &:after {
         content: "";
         position: absolute;
@@ -301,14 +304,15 @@ H1{
     grid-template-columns: auto auto;
 }
 
-nav li svg{
+nav li svg {
     display: grid;
     grid-template-columns:  auto auto;
     grid-column: 1;
     grid-row: 1;
     margin-left: 11px;
 }
-nav li span{
+
+nav li span {
     grid-column: 2;
     grid-row: 1;
 }
@@ -330,7 +334,7 @@ nav li a {
     grid-template-columns: auto auto;
 }
 
-.iconsDesktopNav{
+.iconsDesktopNav {
     position: absolute;
     left: -999%;
 }
@@ -346,7 +350,7 @@ nav li a {
     padding: 1rem;
 }
 
-.intro{
+.intro {
     padding: 1rem;
     margin: 0 auto;
 
@@ -362,13 +366,14 @@ nav li a {
 }
 
 .imageBNR {
-    width: 107%;
+    width: 50%;
     height: auto;
     object-fit: cover;
     margin-top: 2em;
     display: grid;
 }
-.playlist{
+
+.playlist {
     margin: 0 auto;
     /* display: grid; */
     justify-content: center;
@@ -384,17 +389,17 @@ nav li a {
     width: 100%;
     height: 180px;
 }
+
 .playlist {
     container-type: inline-size;
 }
 
-label{
+label {
     display: grid;
 }
 
 
-
-.playlist__icon{
+.playlist__icon {
 
     grid-column: 2;
     height: 2em;
@@ -405,18 +410,18 @@ label{
     grid-row: 1;
     position: absolute;
     top: 3em;
-left: 0em;
+    left: 0em;
 }
 
 
-.playlist__div{
+.playlist__div {
 
     rotate: 271deg;
     display: grid;
-     grid-column: 3;
+    grid-column: 3;
     grid-row: 1;
-     cursor: pointer;
-     justify-self: center;
+    cursor: pointer;
+    justify-self: center;
     padding: 0.7em;
     /*position: absolute;*/
     /*left: 49%;*/
@@ -425,8 +430,7 @@ left: 0em;
 }
 
 
-
-.playlist__inputRange{
+.playlist__inputRange {
     rotate: 359deg;
     accent-color: var(--yellow);
 }
@@ -492,12 +496,17 @@ left: 0em;
 }
 
 .grow {
-   animation: grow 2s ease infinite;
+    animation: grow 2s ease infinite;
 
 }
+
 @keyframes grow {
-    from { transform: scale(1); }
-    to { transform: scale(1.5); }
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
 }
 
 
@@ -517,14 +526,15 @@ left: 0em;
 /*einde van de plyalist*/
 
 /*dit is het blok met het nieuws*/
-.divniews{
+.divniews {
     display: grid;
     grid-template-columns: 1fr;
-   row-gap: 5em;
+    row-gap: 5em;
     padding: 1rem;
 
     margin: 0 auto;
 }
+
 .nieuws {
     /*background-color: var(--yellow);*/
     position: relative;
@@ -536,7 +546,7 @@ left: 0em;
 
 }
 
-.nieuws__h1{
+.nieuws__h1 {
     padding-left: 0.5em;
     padding-top: 0.5em;
     font-size: 20px;
@@ -547,7 +557,7 @@ left: 0em;
     justify-content: center;
 }
 
-.nieuws__yellowBackground{
+.nieuws__yellowBackground {
 
 
     background-color: var(--yellow);
@@ -562,10 +572,9 @@ left: 0em;
     transition: background-color .5s linear;
 
 
-
-
 }
-.nieuws__yellowBackground:after{
+
+.nieuws__yellowBackground:after {
     content: "";
     position: absolute;
     top: 42px;
@@ -599,7 +608,8 @@ left: 0em;
     padding: 1rem;
 
 }
-.niews__button{
+
+.niews__button {
     position: relative;
     display: flex;
     align-items: center;
@@ -621,10 +631,12 @@ left: 0em;
     border: solid var(--color-black) 3px;
     background-color: white;
 }
+
 .nieuws__link:hover {
     background-color: var(--color-black);
     color: var(--white);
 }
+
 .sectionArticles {
     display: grid;
     grid-template-columns: 1fr;
@@ -638,7 +650,7 @@ left: 0em;
     column-gap: 1em;
 
     row-gap: .5rem;
-   border-top: .5px solid var(--gray-border);
+    border-top: .5px solid var(--gray-border);
     /*border-bottom: solid var(--gray-border) 1px;*/
     height: 100%;
     transition: background-color .2s ease-in-out;
@@ -695,9 +707,10 @@ left: 0em;
         position: static;
     }
 }
+
 @media (min-width: 500px) {
 
-    .playlist__div{
+    .playlist__div {
 
         display: grid;
         grid-column: 3;
@@ -713,7 +726,7 @@ left: 0em;
 @media (min-width: 768px) {
 
     .imageBNR {
-        width: 450px;
+        width: 300px;
         height: auto;
         object-fit: cover;
         margin-top: 2em;
@@ -724,10 +737,9 @@ left: 0em;
     /*.nieuws__carousssel:not(:empty) {*/
     /*    overflow-y: auto; !* Show scrollbar only when content exists *!*/
     /*}*/
-
-    .iconsDesktopNav{
+    .iconsDesktopNav {
         flex-shrink: 1;,
-        flex: 1 0 auto;
+    flex: 1 0 auto;
     }
 
     .articles {
@@ -765,20 +777,21 @@ left: 0em;
     /*    align-items: center;*/
     /*    padding: 1rem 2rem;*/
     /*    background-color: var(--color-black);*/
-
     /*}*/
-    .nav li{
-        display:  grid;
+    .nav li {
+        display: grid;
         grid-template-columns: auto auto;
         column-gap: 1em;
     }
-    .iconsDesktopNav{
-           position: relative;
-            left: 0;
+
+    .iconsDesktopNav {
+        position: relative;
+        left: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 1em;
     }
+
     nav li a {
         display: grid;
 
@@ -786,7 +799,7 @@ left: 0em;
         grid-column-gap: 0.5em;
     }
 
-    .searchIcon{
+    .searchIcon {
 
         margin-left: auto;
         display: grid;
