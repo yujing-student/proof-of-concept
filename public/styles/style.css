@@ -172,9 +172,7 @@ li {
     transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
-    color: tomato;
-}
+
 
 
 #menuToggle input {
@@ -255,9 +253,9 @@ li {
 #menu {
     position: absolute;
     /*z-index: 5;*/
-    width: 400px;
+    width: 300px;
     margin: -72px 0 0 -50px;
-    padding: 50px;
+    padding: 15px;
     padding-top: 125px;
     display: grid;
     grid-template-columns: auto;
@@ -314,6 +312,7 @@ nav li svg{
     grid-template-columns:  auto auto;
     grid-column: 1;
     grid-row: 1;
+    margin-left: 11px;
 }
 nav li span{
     grid-column: 2;
@@ -387,15 +386,63 @@ nav li a {
     display: grid;
 }
 .plaubuttonvolume{
-    margin:  0 auto;
-    display: grid;
+    margin: 0 auto;
+    /* display: grid; */
     justify-content: center;
-    grid-template-columns: auto auto;
-    /*grid-template-rows: 5em 5em;*/
+    grid-template-columns: auto auto 5em;
+    display: grid;
+    column-gap: 2em;
+
+
+    flex-direction: row;
+    background-color: var(--color-black);
+    padding: 1em;
+    width: 100%;
+    height: 180px;
 }
+.plaubuttonvolume {
+    container-type: inline-size;
+}
+
+
+
+
+.volumeIcon{
+
+    grid-column: 2;
+    height: 2em;
+    width: 2em;
+    display: grid;
+    justify-self: center;
+    cursor: pointer;
+
+
+
+    /*grid-row-start: 2;*/
+    /*position: absolute;*/
+    /*top: 6em;*/
+    /*left: 23em;*/
+}
+
+.sliderVolume{
+
+    rotate: 271deg;
+    display: grid;
+     grid-column: 3;
+    grid-row: 1;
+     cursor: pointer;
+     justify-self: center;
+    padding: 0.7em;
+    /*position: absolute;*/
+    /*left: 49%;*/
+    /*top: -21px;*/
+
+}
+
+
+
 .volume{
-    rotate: 269deg;
-    grid-column-start: 2;
+    rotate: 359deg;
 }
 
 /*audiobutton*/
@@ -426,6 +473,7 @@ nav li a {
     margin-top: 1em;
     margin-bottom: 1em;
     grid-column: 1;
+    grid-row: 1;
 }
 
 
@@ -661,8 +709,22 @@ H1{
     /*grid-row-end: 2;*/
 }
 
+/* If the container is larger than 700px */
+@container (min-width: 500px) {
+    .sliderVolume {
+        rotate: 0deg;
+        position: static;
+    }
+}
+@media (min-width: 500px) {
 
-@media (min-width: 400px) {
+    .sliderVolume{
+
+        display: grid;
+        grid-column: 3;
+
+
+    }
 
 
 }
@@ -676,6 +738,7 @@ H1{
         margin-top: 2em;
         display: grid;
     }
+
 
     /*.nieuws__carousssel:not(:empty) {*/
     /*    overflow-y: auto; !* Show scrollbar only when content exists *!*/
