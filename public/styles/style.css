@@ -436,8 +436,7 @@ label {
     position: absolute;
     width: 16em;
     top: 8em;
-    left: 65em;
-    /*left: -9999px;*/
+    left: -9999px;
 }
 
 
@@ -476,6 +475,13 @@ label {
     /*border-width: 8px 0 8px 13px;*/
 
 }
+
+/*.audio {*/
+/*    position: absolute;*/
+/*    width: 16em;*/
+/*    top: 8em;*/
+/*    left: 65em;*/
+/*}*/
 
 /*dit is het pauze icoontje*/
 .pauzebutton-open {
