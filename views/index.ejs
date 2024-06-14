@@ -41,22 +41,26 @@
             </svg>
         </button>
         <div class="playlist__div" tabindex="0">
+<!--            <label>-->
             <label>
+<!--               todo  hier nog een form omheen zetten vanwege toegankelijkheid-->
                 <input type="range" class="playlist__inputRange" name="volume" min="0" max="10"/>
             </label>
+            <!--            </label>-->
             <label for="volume" class="playlist__inputRange"></label>
         </div>
 
         <!--            <span class="pleasurable"></span>-->
 
+<!--   todo     arialabel hoeft niet gewoon tekst erin zetten-->
         <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
                 aria-label="this is the button to start teh playlist">
 
+<!--     todo       kijken of pauzebutton op button zelf kan-->
             <span class="pauzebutton " tabindex="0">
                 </span>
         </button>
         <audio controls class="audio" tabindex=" 0">
-            <p>deze audio zie je als javascript uit staat</p>
             <source src="<%= audioUrl %>">
         </audio>
 
@@ -88,7 +92,7 @@
                     </button>
                 </li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">alles</a></li>
-                <li class="nieuws__filter"><a href="#nieuws"class="nieuws__link">economie</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">economie</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">ondernemen&werk</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">tech&innovatie</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Mobiliteit</a></li>

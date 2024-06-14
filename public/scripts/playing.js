@@ -13,6 +13,7 @@ if (!window.script) {
 function togglePlayPause() {
 
 
+    // feature detection of HTML5 audio
     if (window.Audio) {
         if (audio.paused) {
             console.log('video is playing')
@@ -56,7 +57,9 @@ function volume() {
 function toggleBackToTop() {
     const backToTop = document.querySelector(".backToTop");
     const scrollPosition = window.scrollY;
+    //todo  hier kijken naar intersectie observer ipv windowsscrolly
     const halfPage = document.documentElement.clientHeight / 2;
+
 
     if (scrollPosition >= halfPage) {
         backToTop.classList.add("backToTop-open");
