@@ -87,15 +87,15 @@
                         </svg>
                     </button>
                 </li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">alles</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">economie</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">ondernemen&werk</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">tech&innovatie</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">Mobiliteit</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">Column&opinie</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">Duurzaamheid</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">Marketing&media</a></li>
-                <li class="nieuws__filter"><a href="/" class="nieuws__link">Juridisch</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">alles</a></li>
+                <li class="nieuws__filter"><a href="#nieuws"class="nieuws__link">economie</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">ondernemen&werk</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">tech&innovatie</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Mobiliteit</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Column&opinie</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Duurzaamheid</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Marketing&media</a></li>
+                <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Juridisch</a></li>
                 <li class="nieuws__filter">
 
 
@@ -110,8 +110,9 @@
             </ul>
 
         </section>
+        <h1 id="nieuws">zie alle niewsartikelen</h1>
         <section class="sectionArticles">
-            <h1>zie alle niewsartikelen</h1>
+
             <% firstTenArticles.forEach(article => { %>
                 <article class="articles">
                     <h2 class="article__title"><%= article.title %></h2>
