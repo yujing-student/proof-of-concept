@@ -676,6 +676,9 @@ label {
 
 
 }
+.article__title:hover{
+    text-decoration: underline;
+}
 
 .article__text {
     font-size: 16px;
