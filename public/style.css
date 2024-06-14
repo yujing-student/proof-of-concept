@@ -591,48 +591,42 @@ h1 {
     margin-bottom: var(--heading-spacing);
 }
 
-.members .logo-container {
+.members .slider {
+    --duration: calc(2s * var(--_length));
+    --gap: 4rem;
     display: flex;
-    justify-content: center;
     overflow: hidden;
+    gap: var(--gap);
     position: relative;
-    width: 100%;
+    margin-bottom: var(--gap);
 
-    &::before,
-	&::after {
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 3rem;
-		z-index: 2;
+    &:before,
+    &:after {
+        content: '';
+        width: 3rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
         background: linear-gradient(to right,  rgb(0, 0, 0) 0%,rgba(255,255,255,0) 100%);
-    };
-	
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
+    }
 
-	&::before {
-		left: 0;
-		top: 0;
-	}
+    &:after {
+        left: auto;
+        right: 0;
+        background: linear-gradient(to left,  rgb(0, 0, 0) 0%,rgba(255,255,255,0) 100%);
+    }
 }
 
-.members ul {
+.members .logo-container {
+    flex-shrink: 0;
     display: flex;
-    gap: var(--spacing);
-    /* overflow-x: scroll;
-    scroll-snap-type: x mandatory; */
-    margin-bottom: var(--heading-spacing);
-    animation: scroll linear infinite;
-    /* width: calc(6rem * 14); */
-    white-space: nowrap;
-}
-
-.members li {
-    scroll-snap-align: center;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
 }
 
 .members img {
@@ -649,12 +643,19 @@ h1 {
     text-align: center;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .members .logo-container {
+        animation-play-state: paused;
+    }
+}
+
 @keyframes scroll {
-    from {
+    0% {
         transform: translateX(0);
     }
-    to {
-        transform: translateX(-100%);
+ 
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
     }
 }
 
@@ -757,6 +758,12 @@ nav a:hover {
 
 .active {
     border-bottom: 1px solid var(--primary-light);
+}
+
+.slider:hover {
+    .logo-container {
+        animation-play-state: paused;
+    }
 }
 
 /* ----------- Media queries: Tablet S ----------- */
@@ -1224,21 +1231,20 @@ nav a:hover {
         margin: 0;
     }
 
-    .members .logo-container {
+    .members .slider {
         grid-column: 2;
         grid-row: 2;
-        overflow: hidden;
     }
 
-    .members .logo-container ul {
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
+    .members .logo-container {
+        /* overflow-x: scroll; */
+        /* scroll-snap-type: x mandatory; */
         margin-bottom: 0;
     }
 
-    .logo-container li {
+    /* .logo-container li {
         scroll-snap-align: center;
-    }
+    } */
 
     .members .to-members {
         grid-column: 1;

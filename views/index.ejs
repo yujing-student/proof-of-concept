@@ -113,13 +113,13 @@
                         </li>
                     </ul>
                     <div class="button-container">
-                        <button aria-label="vorige"><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg"
+                        <button aria-label="vorige artikel"><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 330 330" xml:space="preserve">
                                 <path
                                     d="M233.3 306 127.5 165 233.3 24a15 15 0 1 0-24-18L96.7 156a15 15 0 0 0 0 18l112.5 150a15 15 0 1 0 24-18z" />
                             </svg>
                         </button>
-                        <button aria-label="volgende"><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg"
+                        <button aria-label="volgende artikel"><svg height="40" width="30" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 330 330" xml:space="preserve">
                                 <path
                                     d="M233.3 156 120.8 6a15 15 0 0 0-24 18l105.7 141L96.8 306a15 15 0 1 0 24 18l112.5-150a15 15 0 0 0 0-18z" />
@@ -274,24 +274,41 @@
                     Leer
                     onze
                     leden kennen en ontdek welk bureau het beste bij je past.</p>
-                <div class="logo-container">
-                    <ul>
-                        <% agencies.forEach(agency=> { %>
-                            <li>
-                                <a href="#" tabindex="-1">
-                                    <picture>
-                                        <% if (agency.logo !=null) { %>
-                                            <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=avif" type="image/avif">
-                                            <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=webp" type="image/webp">
-                                            <img height="96" width="96" src="https://fdnd-agency.directus.app/assets/<%= agency.logo %>" alt="agency logo" loading="lazy"
-                                            onerror="this.onerror=null; this.src='images/image-fallback.jpg';">
-                                        <% } %>
-                                    </picture>
-                                </a>
-                            </li>
-                        <% }); %>
-                    </ul>
-                </div>
+                    <div class="slider" style="--_length: <%= agencies.length %>">
+                        <ul class="logo-container">
+                            <% agencies.forEach(agency=> { %>
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <picture>
+                                            <% if (agency.logo !=null) { %>
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=avif" type="image/avif">
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=webp" type="image/webp">
+                                                <img height="96" width="96" src="https://fdnd-agency.directus.app/assets/<%= agency.logo %>" alt="agency logo" loading="lazy"
+                                                onerror="this.onerror=null; this.src='images/image-fallback.jpg';">
+                                            <% } %>
+                                        </picture>
+                                    </a>
+                                </li>
+                            <% }); %>
+                        </ul>
+
+                        <ul aria-hidden="true" class="logo-container -second">
+                            <% agencies.forEach(agency=> { %>
+                                <li>
+                                    <a href="#" tabindex="-1">
+                                        <picture>
+                                            <% if (agency.logo !=null) { %>
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=avif" type="image/avif">
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=webp" type="image/webp">
+                                                <img height="96" width="96" src="https://fdnd-agency.directus.app/assets/<%= agency.logo %>" alt="agency logo" loading="lazy"
+                                                onerror="this.onerror=null; this.src='images/image-fallback.jpg';">
+                                            <% } %>
+                                        </picture>
+                                    </a>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
                 <a href="#" class="to-members">Bekijk al onze leden</a>
             </section>
         </main>

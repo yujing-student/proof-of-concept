@@ -118,23 +118,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Set the max-height of the list-view container
         document.querySelector('.list-view-container').style.maxHeight = `${maxHeight}px`;
     }
-
-    const logoList = document.querySelector('.members ul');
-    const logos = Array.from(logoList.children);
-    const numLogos = logos.length;
-
-    // Clone logos and append to the end for seamless scroll
-    logos.forEach(logo => {
-        logoList.appendChild(logo.cloneNode(true));
-    });
-
-    // Calculate and set the width of the logo list
-    const logoWidth = logos[0].offsetWidth;
-    const totalWidth = logoWidth * numLogos * 2; // Twice for the cloned set
-    logoList.style.width = `${totalWidth}px`;
-
-    // Set animation duration based on total width
-    const animationSpeed = totalWidth / 100; // Adjust this value for desired speed
-    logoList.style.animationDuration = `${animationSpeed}s`;
-
 });

@@ -45,6 +45,26 @@ app.get("/", function (request, response) {
 });
 });
 
+app.get("/about", function (request, response) {
+  response.render("about")
+})
+
+app.get("/vacancies", function (request, response) {
+  response.render("vacancies")
+})
+
+app.get("/members", function (request, response) {
+  response.render("members")
+})
+
+app.get("/news", function (request, response) {
+  response.render("news")
+})
+
+app.get("/events", function (request, response) {
+  response.render("events")
+})
+
 // 3. Start de webserver
 
 // Stel het poortnummer in waar express op moet gaan luisteren
