@@ -374,6 +374,7 @@ nav li a {
     /* display: grid; */
     /*justify-content: center;*/
     grid-template-columns: 8em 4em 3em;
+    grid-template-rows: auto auto;
     display: grid;
     column-gap: 0.5em;
     border-bottom: .5px solid var(--gray-border);
