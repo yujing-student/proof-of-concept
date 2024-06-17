@@ -334,13 +334,21 @@ nav li a {
 
 
 .gridcontainter {
-    display: grid;
-    /*grid-template-columns: 1fr;*/
-    row-gap: 2em;
-    padding: 1rem;
+
+    padding: 1rem 1rem 1rem 2em;
 }
 
-#top, .nieuws__h1, #nieuws {
+#top {
+    font-size: 2.3rem;
+    margin-bottom: 0.5em;
+    line-height: 1.5em;
+}
+.nieuws__h1{
+    font-size: 2.3rem;
+    margin-bottom: 0.5em;
+    line-height: 1.5em;
+}
+#nieuws{
     font-size: 2.3rem;
     margin-bottom: 0.5em;
     line-height: 1.5em;
@@ -353,12 +361,13 @@ nav li a {
     grid-column: 1;
     line-height: 1.5em;
 }
-.intro p {
+.intro ul p {
     font-size: 1.4rem;
     margin-bottom: 1em;
     line-height: 1.5em;
 
 }
+
 
 
 .imageBNR {
@@ -553,7 +562,6 @@ label {
 /*dit is het blok met het nieuws*/
 
 #nieuws{
-    font-size: 1.75rem;
     margin-bottom: 1em;
     /*margin: 0 auto;*/
 }
@@ -582,7 +590,6 @@ label {
 .nieuws__h1 {
     padding-left: 0.5em;
     padding-top: 0.5em;
-    font-size: 1.75rem;
     font-weight: 700;
     color: var(--color-black);
     line-height: 1.2;
@@ -724,6 +731,7 @@ label {
 }
 .stylingButton{
     text-align: center;
+    margin-top: 2em;
 }
 .bekijkmeerButton{
     display: inline-block;
@@ -748,25 +756,31 @@ label {
     }
 }
 
-@media (min-width: 768px) {
-    .gridcontainter{
-        grid-template-columns: 1fr 1fr;
-        /*column-gap: 2em;*/
-        justify-content: center;
-        margin: 0 auto;
+@media (min-width: 900px) {
+
+    .playlist-intro{
+        display: grid;
+        grid-template-columns: 1fr 30em;
+        column-gap: 1em;
+        max-width: 74em;
     }
     #top,.nieuws__h1,#nieuws{
         font-size: 2.5rem;
     }
 
+    .intro ul {
+        font-size: 1.5rem;
+    }
     .intro p {
         font-size: 1.5rem;
+    }
+    ul{
+        list-style-type: disc;
     }
     .intro{
         grid-column: 1;
         margin-top: 10em;
         height: 10em;
-        margin-left: 2em;
     }
     .stylingplaylist{
         grid-column: 2;
@@ -784,6 +798,8 @@ label {
         grid-column-start: 1;
         grid-column-end: 3;
         margin: 0 auto;
+
+        grid-row:2;
     }
 
     .imageBNR {
@@ -848,6 +864,21 @@ label {
     #menuToggle {
         display: none;
     }
+    .gridcontainter{
+        /*column-gap: 2em;*/
+        display: grid;
+        justify-content: center;
+        /*margin: 0 auto;*/
+    }
+    .divniews{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    /*.gridcontainter{*/
+    /*    grid-template-columns: 692px 411px;*/
+    /*}*/
 
 }
 
