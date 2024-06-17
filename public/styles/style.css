@@ -386,6 +386,7 @@ nav li a {
     padding: 1rem;
     grid-column: 1;
     margin: 0 auto;
+    box-shadow: 0 0 300px 0 rgba(0,0,0,0.1);
 
 }
 .playlist {
@@ -784,7 +785,7 @@ label {
     }
     .stylingplaylist{
         grid-column: 2;
-        border: #d7d2cb;
+        /*box-shadow: 0 0 300px 0 rgba(0,0,0,0.1);*/
 
     }
     /*.intro,.stylingplaylist{*/
