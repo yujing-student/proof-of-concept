@@ -9,7 +9,7 @@
     <section class="intro">
         <h1 id="top">BNR beats business</h1>
         <p>Luister naar muziek en krijg ieder half uur een niewsbericht </p>
-        <p>Ook kunt u de laatste niews artikelen lezen</p>
+        <p class="intoP">Ook kunt u de laatste niews artikelen lezen</p>
 
         <!--        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-->
         <!--        todo kijken of image in div kan playlist kan-->
@@ -41,12 +41,16 @@
         </button>
         <div class="playlist__div" tabindex="0">
 <!--            <label>-->
+            <form>
+
+
             <label>
 <!--               todo  hier nog een form omheen zetten vanwege toegankelijkheid-->
                 <input type="range" class="playlist__inputRange" name="volume" min="0" max="10"/>
             </label>
             <!--            </label>-->
             <label for="volume" class="playlist__inputRange"></label>
+            </form>
         </div>
 
         <!--            <span class="pleasurable"></span>-->
