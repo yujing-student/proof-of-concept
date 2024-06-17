@@ -1,8 +1,8 @@
 <%- include('./partials/head') %>
 <%- include('./partials/navigation') %>
 
-
 <body>
+
 <main class="gridcontainter">
 
     <!--    hier nth child gebruiken-->
@@ -20,10 +20,8 @@
             <source srcset="assets/business.jpg?width=400&height=300&fit=cover&format=avif"
                     type="image/avif">
 
-
             <img src="assets/business.jpg?width=200&height=100&fit=cover" loading="lazy"
-                 alt="Image of the house" class="imageBNR lazyload"
-            >
+                 alt="Image of the house" class="imageBNR lazyload">
         </picture>
     </section>
 
@@ -67,7 +65,6 @@
 
     </div>
 
-
     <a href="#top" class="backToTop ">
         <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 8l1.41 1.41L7 3.83V16h2V3.83l5.59 5.58L16 8 8 0 0 8z" fill="#fff"></path>
@@ -77,17 +74,14 @@
     <div class="divniews">
         <section class="nieuws">
 
-            <span class="nieuws__yellowBackground">
-
-            </span>
+            <span class="nieuws__yellowBackground"></span>
             <!--            hier nth child gebruiken-->
             <h1 class="nieuws__h1">Nieuws</h1>
 
             <ul class="nieuws__carousssel">
                 <li class="nieuws__filter">
                     <button class="niews__button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" fill="none"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" fill="none">
                             <path d="M6.5.5l-6 6 6 6 1.4-1.45L4.35 7.5H16.5v-2H4.35L7.9 1.95 6.5.5z" fill="#fff"></path>
                         </svg>
                     </button>
@@ -103,7 +97,6 @@
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Juridisch</a></li>
                 <li class="nieuws__filter">
 
-
                     <button class="niews__button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17"
                              height="13" fill="none">
@@ -115,7 +108,9 @@
             </ul>
 
         </section>
+
         <h1 id="nieuws">zie alle niewsartikelen</h1>
+
         <section class="sectionArticles">
 
             <% firstTenArticles.forEach(article => { %>
@@ -134,8 +129,7 @@
                             <img src="<%= article.photo.URL %>?width=200&height=100&fit=cover" loading="lazy"
                                  alt="Image of the house"
                                  width="<%= article.photo.URL %>"
-                                 height=" <%= article.photo.URL %>" class="article__img"
-                            >
+                                 height=" <%= article.photo.URL %>" class="article__img">
                         </picture>
                     <% } %>
                 </article>
@@ -143,7 +137,6 @@
 
         </section>
     </div>
-
 
 </main>
 
