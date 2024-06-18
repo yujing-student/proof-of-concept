@@ -52,13 +52,13 @@ li {
     list-style: none;
 
 }
-a {
-    color: var(--color-black);
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
+/*a {*/
+/*    color: var(--color-black);*/
+/*    text-decoration: none;*/
+/*}*/
+/*a:hover{*/
+/*    text-decoration: underline;*/
+/*}*/
 
 /*hier begint  de navigatie*/
 
@@ -369,9 +369,47 @@ nav li a {
     margin-bottom: 0.5em;
     line-height: 1.5;
     font-weight: 600;
+    text-decoration: none;
+    color: var(--color-black);
+
+
 
 }
 
+.animationLink a {
+    /*aanpassen positie en weghalen van de focus en de border*/
+    position: relative;
+    text-decoration: none;
+    outline: none;
+}
+
+.animationLink a::after {
+    /*contenet moet leeg zijn*/
+    content: "";
+
+    /*positioneren*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /*hoogte en breedte*/
+    height: 0.25em;
+    background-color: var(--yellow);
+    /*schaal de grootte*/
+    scale: 0 1;
+    /*transform-origin: right center;*/
+    transition: scale 0.3s;
+}
+
+/*hier zeg ik de animatie heeft een schaal van 1 bij 1 hoogte x breedte en gaat van links naar recths de lijnn*/
+
+.animationLink a:hover:after,
+.animationLink a:focus-visible:after {
+    /* JOUW CODE HIER */
+    scale: 1 1;
+    transform-origin: left center;
+}
 
 .intro {
     padding: 1rem;
@@ -409,21 +447,13 @@ nav li a {
 
 }
 .playlist {
-    /*margin: 0 auto;*/
-    /* display: grid; */
-    /*justify-content: center;*/
     grid-template-columns: 8em 4em 3em;
     grid-template-rows: auto auto;
     display: grid;
     column-gap: 1.5em;
-    /*justify-content: center;*/
-    /*border-bottom: .5px solid var(--gray-border);*/
-
 
     flex-direction: row;
-    /*background-color: var(--color-black);*/
     padding-top: 2em;
-    /*padding-left: 5em;*/
     width: 100%;
     height: 180px;
 }
@@ -451,7 +481,7 @@ label {
     grid-row: 1;
     position: absolute;
     top: 3em;
-    left: 0em;
+    left: 0;
     border: none;
     background-color: transparent;
 }
@@ -532,13 +562,6 @@ label {
 
 }
 
-/*.audio {*/
-/*    position: absolute;*/
-/*    width: 16em;*/
-/*    top: 8em;*/
-/*    left: 65em;*/
-/*}*/
-
 /*dit is het pauze icoontje*/
 .pauzebutton-open {
     border-style: none;
@@ -595,18 +618,6 @@ label {
     /*margin: 0 auto;*/
 }
 
-/*.nieuws {*/
-/*    background-color: var(--yellow);*/
-/*    !*todo toeveogen dat diagnaal *!*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    transition: color .5s linear;*/
-/*    !*background-color: var(--yellow) 50%, var(--white) 50%;*!*/
-/*    background-size: 100% 100%; !* Ensures colors fill the entire section *!*/
-/*    background-position: 0 0;*/
-
-
-/*}*/
 
 .nieuws {
     background-color: var(--yellow);
@@ -628,37 +639,6 @@ label {
     display: grid;
     /*justify-content: center;*/
 }
-
-/*.nieuws__yellowBackground {*/
-
-/*    background-image: linear-gradient( 50% ,var(--yellow), white);*/
-/*    !*background-color: var(--yellow);*!*/
-
-/*    overflow: hidden;*/
-/*    z-index: -1;*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    top: 0;*/
-/*    !*width: 42%;*!*/
-/*    height: 100%;*/
-/*    transition: background-color .5s linear;*/
-
-
-/*}*/
-
-/*.nieuws__yellowBackground:after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    top: 42px;*/
-/*    right: 0;*/
-/*    left: 177px;*/
-/*    background: var(--white);*/
-/*    width: 202px;*/
-/*    height: 202px;*/
-/*    transform: rotate(45deg);*/
-/*}*/
-
-
 .nieuws__carousssel {
     display: flex;
     flex-direction: row;
@@ -792,6 +772,11 @@ label {
     /*padding: 0.25rem 0.25rem 0.75rem 0.75rem;*/
  padding: 1rem;
     font-size: 18px;
+    text-decoration: none;
+}
+.bekijkmeerButton:hover {
+    background-color: var(--yellow);
+    color: var(--color-black);
 }
 
 @container (min-width: 300px) {
