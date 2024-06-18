@@ -340,40 +340,25 @@ nav li a {
 
 
 
-.gridcontainter {
+main {
     display: grid;
     row-gap: 3em;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
 }
 
-#top {
+h1:nth-child(1),.NieuwsFilter__h1{
     font-size: 2.3rem;
     margin-bottom: 0.5em;
     line-height: 1.5em;
 }
-.nieuws__h1{
-    font-size: 2.3rem;
-    margin-bottom: 0.5em;
-    line-height: 1.5em;
-}
-
-#nieuws{
-    font-size: 2.3rem;
-    margin-bottom: 0.5em;
-    line-height: 1.5;
-}
-
-.linkToNiews{
+a:nth-child(2) {
     font-size: 1.5rem;
     margin-bottom: 0.5em;
     line-height: 1.5;
     font-weight: 600;
     text-decoration: none;
     color: var(--color-black);
-
-
-
 }
 
 .animationLink a {
@@ -425,9 +410,7 @@ nav li a {
 
 }
 
-
-
-.imageBNR {
+div picture img:nth-child(2){
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -435,6 +418,25 @@ nav li a {
     display: grid;
 }
 
+
+.stylingplaylist:nth-child(2) picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /*margin: 0 auto;*/
+    display: grid;
+}
+
+/*div:nth-child(2) {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr;*/
+/*    row-gap: 2em;*/
+/*    padding: 1rem;*/
+/*    grid-column: 1;*/
+/*    margin: 0 auto;*/
+/*    box-shadow: 0 0 300px 0 rgba(0,0,0,0.1);*/
+
+/*}*/
 
 .stylingplaylist{
     display: grid;
@@ -610,7 +612,7 @@ label {
     margin-bottom: 1em;
     /*margin: 0 auto;*/
 }
-.divnieuws {
+.NieuwsFilter {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2em;
@@ -619,7 +621,7 @@ label {
 }
 
 
-.nieuws {
+.NieuwsFilter__section {
     background-color: var(--yellow);
     position: relative;
     overflow: hidden;
@@ -630,7 +632,7 @@ label {
 }
 
 
-.nieuws__h1 {
+.NieuwsFilter__h1 {
     padding-left: 0.5em;
     padding-top: 0.5em;
     font-weight: 700;
@@ -639,7 +641,7 @@ label {
     display: grid;
     /*justify-content: center;*/
 }
-.nieuws__carousssel {
+.NieuwsFilter__carousssel {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -652,7 +654,7 @@ label {
 
 }
 
-.nieuws__filter {
+.nieuws__filter__li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -677,7 +679,7 @@ label {
     z-index: 5;
 }
 
-.nieuws__link {
+.NieuwsFilter__link {
     /*color: var(--color-black);*/
     /*text-decoration: none;*/
     /*padding: 0.4em;*/
@@ -696,7 +698,7 @@ label {
 
 }
 
-.nieuws__link:hover {
+.NieuwsFilter__link:hover {
     background-color: var(--color-black);
     color: var(--white);
 }
@@ -762,6 +764,7 @@ label {
 
     /*margin-top: 2em;*/
 }
+
 .bekijkmeerButton{
     display: inline-block;
     outline-offset: 0;
@@ -779,7 +782,7 @@ label {
     color: var(--color-black);
 }
 
-@container (min-width: 300px) {
+@container (min-width: 350px) {
     .playlist__div {
         rotate: 0deg;
         position: static;
@@ -791,16 +794,16 @@ label {
     }
 }
 @media (min-width: 400px) {
-    .gridcontainter{
+    main{
         padding: 2em;
     }
 
 }
 @media (min-width: 570px) {
-    .imageBNR{
+
+    .stylingplaylist:nth-child(2) picture img{
         width: 504px;
         height: auto;
-
     }
     .stylingplaylist{
         max-width: 770px;
@@ -827,20 +830,19 @@ label {
 }
 @media (min-width: 900px) {
 
-    .playlist-intro{
+
+    div:nth-child(1) {
         display: grid;
         grid-template-columns: 1fr 30em;
         column-gap: 1em;
         max-width: 74em;
     }
-    #top,.nieuws__h1,#nieuws{
+
+    h1:nth-child(1),.NieuwsFilter__h1{
         font-size: 2.5rem;
     }
 
-    .intro ul {
-        font-size: 1.5rem;
-    }
-    .intro p {
+    .intro ul p{
         font-size: 1.5rem;
     }
     ul{
@@ -856,15 +858,8 @@ label {
         /*box-shadow: 0 0 300px 0 rgba(0,0,0,0.1);*/
 
     }
-    /*.intro,.stylingplaylist{*/
-    /*    !*grid-column-start: 2;*!*/
-    /*    margin: 0 auto;*/
-    /*    justify-self: center;*/
-    /*    place-items: center;*/
-    /*}*/
 
-
-    .imageBNR {
+    .stylingplaylist:nth-child(2) picture img{
         width: 379px;
         height: auto;
         object-fit: cover;
@@ -902,7 +897,7 @@ label {
         column-gap: 1em;
     }
 
-    .nieuws__carousssel{
+    .NieuwsFilter__carousssel{
         overflow: hidden;
     }
 
@@ -924,7 +919,7 @@ label {
     #menuToggle {
         display: none;
     }
-    .gridcontainter{
+    main{
         /*column-gap: 2em;*/
         display: grid;
         justify-content: center;
