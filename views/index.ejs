@@ -10,8 +10,10 @@
         <section class="intro">
             <h1 id="top">BNR business beats </h1>
 
-            <p>Hier kunt u naar muziek luisteeren met ieder half uur een niewsbulleting. Verder kunt u ook het laatste niews lezen
-            ga naar: <a href="#nieuws">Nieuws</a>
+            <p>
+                Blijf op de hoogte van het laatste nieuws terwijl je geniet van jouw favoriete muziek. Elk half uur een nieuwsbulletin, en tussendoor non-stop muziek.
+            <br>
+                ga naar: <a href="#nieuws">Nieuws</a>
 
             </p>
 
@@ -123,9 +125,9 @@
         </section>
 
 
-        <section class="">
-            <h1 id="nieuws">zie alle nieuwsartikelen</h1>
-            <div class="sectionArticles">
+        <section class="sectionArticles" id="nieuws">
+<!--            <h1 id="nieuws">zie alle nieuwsartikelen</h1>-->
+
 
                 <% firstTenArticles.forEach(article => { %>
                     <article class="articles">
@@ -148,7 +150,6 @@
                         <% } %>
                     </article>
                 <% }) %>
-            </div>
             <div class="stylingButton">
                 <a
                     class="bekijkmeerButton"

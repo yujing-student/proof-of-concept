@@ -336,8 +336,8 @@ nav li a {
 .gridcontainter {
     display: grid;
     row-gap: 3em;
-
-    padding: 1rem 1rem 1rem 2em;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
 }
 
 #top {
@@ -350,10 +350,11 @@ nav li a {
     margin-bottom: 0.5em;
     line-height: 1.5em;
 }
+
 #nieuws{
     font-size: 2.3rem;
     margin-bottom: 0.5em;
-    line-height: 1.5em;
+    line-height: 1.5;
 }
 
 .intro {
@@ -373,7 +374,7 @@ nav li a {
 
 
 .imageBNR {
-    width: 60%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     /*margin: 0 auto;*/
@@ -571,8 +572,7 @@ label {
 .divnieuws {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 5em;
-    padding: 1rem;
+    row-gap: 2em;
 
     /*margin: 0 auto;*/
 }
@@ -682,21 +682,22 @@ label {
 
 .sectionArticles {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 2em));
     gap: 2em;
 
 }
 
+
 .articles {
     display: grid;
-    grid-template-columns: 1fr;
+    /*grid-template-columns: 1fr;*/
     column-gap: 1em;
 
     row-gap: .5rem;
     border: .5px solid var(--gray-border);
     height: 100%;
     transition: background-color .2s ease-in-out;
-   padding: 2em;
+   padding: 1em;
 
 }
 
@@ -728,13 +729,13 @@ label {
 
 
 .article__img {
-    width: 80%;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
 .stylingButton{
     text-align: center;
-    margin-top: 2em;
+    /*margin-top: 2em;*/
 }
 .bekijkmeerButton{
     display: inline-block;
@@ -745,6 +746,7 @@ label {
     transition: background-color .2s ease-in-out;
     /*padding: 0.25rem 0.25rem 0.75rem 0.75rem;*/
  padding: 1rem;
+    font-size: 18px;
 }
 
 @container (min-width: 300px) {
@@ -758,7 +760,39 @@ label {
 
     }
 }
+@media (min-width: 400px) {
+    .gridcontainter{
+        padding: 2em;
+    }
 
+}
+@media (min-width: 570px) {
+    .imageBNR{
+        width: 504px;
+        height: auto;
+
+    }
+    .stylingplaylist{
+        max-width: 770px;
+        height:auto;
+    }
+    .sectionArticles{
+        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    }
+    .article__img{
+        /*width: 70%;*/
+        height: auto;
+
+    }
+    /*.sectionArticles{*/
+    /*    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));*/
+    /*}*/
+}
+@media (min-width: 770px) {
+
+
+
+}
 @media (min-width: 900px) {
 
     .playlist-intro{
@@ -816,14 +850,7 @@ label {
         padding: 24px;
     }
 
-    .sectionArticles {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(390px, 0));
 
-
-        gap: 2em;
-
-    }
 
     .iconsDesktopNav {
         position: relative;
