@@ -6,66 +6,77 @@
 <main class="gridcontainter">
 
     <!--    hier nth child gebruiken-->
-    <section class="intro">
-        <h1 id="top">BNR beats business</h1>
-        <p>Luister naar muziek en krijg ieder half uur een niewsbericht </p>
-        <p class="intoP">Ook kunt u de laatste niews artikelen lezen</p>
+    <div class="playlist-intro">
+        <section class="intro">
+            <h1 id="top">BNR business beats </h1>
 
-        <!--        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-->
-        <!--        todo kijken of image in div kan playlist kan-->
-        <picture>
-            <source srcset="assets/business.jpg?width=400&height=300&fit=cover&format=webp"
-                    type="image/webp">
+            <p>
+                Blijf op de hoogte van het laatste nieuws terwijl je geniet van jouw favoriete muziek. Elk half uur een nieuwsbulletin, en tussendoor non-stop muziek.
+            <br>
+                ga naar: <a href="#nieuws">Nieuws</a>
 
-            <source srcset="assets/business.jpg?width=400&height=300&fit=cover&format=avif"
-                    type="image/avif">
+            </p>
 
-            <img src="assets/business.jpg?width=200&height=100&fit=cover" loading="lazy"
-                 alt="Image of the house" class="imageBNR lazyload">
-        </picture>
-    </section>
+            <!--        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-->
+            <!--        todo kijken of image in div kan playlist kan-->
 
-<!--    todo dit lege blok nog stulen-->
-    <div class="playlist" tabindex="0">
+        </section>
 
-        <button class="playlist__icon">
+        <!--    todo dit lege blok nog stulen-->
+        <div class="stylingplaylist">
+            <picture>
+                <source srcset="assets/business.jpg?width=400&height=300&fit=cover&format=webp"
+                        type="image/webp">
 
-            <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12.5c0 2.3-.8 4.5-2 6.2l.7.8c1.5-1.9 2.4-4.4 2.4-7 0-3.1-1.2-5.9-3.2-8l-.5 1c1.6 1.8 2.6 4.3 2.6 7z"
-                      fill="#FFD200"></path>
-                <path d="M15.8 6.4l-.5 1c1.1 1.4 1.7 3.2 1.7 5.1 0 1.7-.5 3.2-1.3 4.6l.7.8c1.1-1.5 1.7-3.4 1.7-5.4-.1-2.3-.9-4.4-2.3-6.1z"
-                      fill="#FFD200"></path>
-                <path d="M14.8 8.4l-.5 1.1c.5.9.8 1.9.8 3 0 1-.3 2-.7 2.9l.7.9c.6-1.1 1-2.4 1-3.7-.1-1.6-.5-3-1.3-4.2zM8.137 8.89a.5.5 0 01-.312.11H4.5a.5.5 0 00-.5.5v5a.5.5 0 00.5.5h3.325a.5.5 0 01.312.11l4.05 3.24a.5.5 0 00.813-.39V6.04a.5.5 0 00-.812-.39L8.137 8.89z"
-                      fill="#FFD200"></path>
-            </svg>
-        </button>
-        <div class="playlist__div" tabindex="0">
-<!--            <label>-->
-            <form>
+                <source srcset="assets/business.jpg?width=400&height=300&fit=cover&format=avif"
+                        type="image/avif">
+
+                <img src="assets/business.jpg?width=200&height=100&fit=cover" loading="lazy"
+                     alt="Image of the house" class="imageBNR lazyload">
+            </picture>
+
+            <div class="playlist">
+
+                <button class="playlist__icon" title="playlist icon" name="playlist icon">
+
+                    <svg width="24" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 12.5c0 2.3-.8 4.5-2 6.2l.7.8c1.5-1.9 2.4-4.4 2.4-7 0-3.1-1.2-5.9-3.2-8l-.5 1c1.6 1.8 2.6 4.3 2.6 7z"
+                              fill="#000000"></path>
+                        <path d="M15.8 6.4l-.5 1c1.1 1.4 1.7 3.2 1.7 5.1 0 1.7-.5 3.2-1.3 4.6l.7.8c1.1-1.5 1.7-3.4 1.7-5.4-.1-2.3-.9-4.4-2.3-6.1z"
+                              fill="#000000"></path>
+                        <path d="M14.8 8.4l-.5 1.1c.5.9.8 1.9.8 3 0 1-.3 2-.7 2.9l.7.9c.6-1.1 1-2.4 1-3.7-.1-1.6-.5-3-1.3-4.2zM8.137 8.89a.5.5 0 01-.312.11H4.5a.5.5 0 00-.5.5v5a.5.5 0 00.5.5h3.325a.5.5 0 01.312.11l4.05 3.24a.5.5 0 00.813-.39V6.04a.5.5 0 00-.812-.39L8.137 8.89z"
+                              fill="#000000"></path>
+                    </svg>
+                </button>
+
+                <!--            <label>-->
+                <form class="playlist__div">
 
 
-            <label>
-<!--               todo  hier nog een form omheen zetten vanwege toegankelijkheid-->
-                <input type="range" class="playlist__inputRange" name="volume" min="0" max="10"/>
-            </label>
-            <!--            </label>-->
-            <label for="volume" class="playlist__inputRange"></label>
-            </form>
-        </div>
+                    <label>
+                        <!--               todo  hier nog een form omheen zetten vanwege toegankelijkheid-->
+                        <input type="range" class="playlist__inputRange" name="volume" min="0" max="10"/>
+                    </label>
+                    <!--            </label>-->
+                    <label for="volume" class="playlist__inputRange"></label>
+                </form>
 
-        <!--            <span class="pleasurable"></span>-->
+                <!--            <span class="pleasurable"></span>-->
 
-<!--   todo     arialabel hoeft niet gewoon tekst erin zetten-->
-        <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
-                aria-label="this is the button to start teh playlist">
+                <!--   todo     arialabel hoeft niet gewoon tekst erin zetten-->
+                <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
+                        title="playlistbutton">
 
-<!--     todo       kijken of pauzebutton op button zelf kan-->
-            <span class="pauzebutton " tabindex="0">
+                    <!--     todo       kijken of pauzebutton op button zelf kan-->
+                    <span class="pauzebutton ">
                 </span>
-        </button>
-        <audio controls class="audio" tabindex=" 0">
-            <source src="<%= audioUrl %>">
-        </audio>
+                </button>
+                <audio controls class="audio" tabindex=" 0">
+                    <source src="<%= audioUrl %>">
+                </audio>
+
+            </div>
+        </div>
 
     </div>
 
@@ -75,7 +86,7 @@
         </svg>
     </a>
     <!--    hier nth child gebruiken-->
-    <div class="divniews">
+    <div class="divnieuws">
         <section class="nieuws">
 
             <span class="nieuws__yellowBackground"></span>
@@ -83,13 +94,13 @@
             <h1 class="nieuws__h1">Nieuws</h1>
 
             <ul class="nieuws__carousssel">
-                <li class="nieuws__filter">
-                    <button class="niews__button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" fill="none">
-                            <path d="M6.5.5l-6 6 6 6 1.4-1.45L4.35 7.5H16.5v-2H4.35L7.9 1.95 6.5.5z" fill="#fff"></path>
-                        </svg>
-                    </button>
-                </li>
+                <!--                <li class="nieuws__filter">-->
+                <!--                    <button class="nieuws__button">-->
+                <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" fill="none">-->
+                <!--                            <path d="M6.5.5l-6 6 6 6 1.4-1.45L4.35 7.5H16.5v-2H4.35L7.9 1.95 6.5.5z" fill="#fff"></path>-->
+                <!--                        </svg>-->
+                <!--                    </button>-->
+                <!--                </li>-->
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">alles</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">economie</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">ondernemen&werk</a></li>
@@ -99,47 +110,54 @@
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Duurzaamheid</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Marketing&media</a></li>
                 <li class="nieuws__filter"><a href="#nieuws" class="nieuws__link">Juridisch</a></li>
-                <li class="nieuws__filter">
+                <!--                <li class="nieuws__filter">-->
 
-                    <button class="niews__button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17"
-                             height="13" fill="none">
-                            <path d="M10.5 12.5l6-6-6-6-1.4 1.45 3.55 3.55H.5v2h12.15L9.1 11.05l1.4 1.45z"
-                                  fill="#fff"></path>
-                        </svg>
-                    </button>
-                </li>
+                <!--                    <button class="nieuws__button">-->
+                <!--                        <svg xmlns="http://www.w3.org/2000/svg" width="17"-->
+                <!--                             height="13" fill="none">-->
+                <!--                            <path d="M10.5 12.5l6-6-6-6-1.4 1.45 3.55 3.55H.5v2h12.15L9.1 11.05l1.4 1.45z"-->
+                <!--                                  fill="#fff"></path>-->
+                <!--                        </svg>-->
+                <!--                    </button>-->
+                <!--                </li>-->
             </ul>
 
         </section>
 
-        <h1 id="nieuws">zie alle niewsartikelen</h1>
 
-        <section class="sectionArticles">
-
-            <% firstTenArticles.forEach(article => { %>
-                <article class="articles">
-                    <h2 class="article__title"><%= article.title %></h2>
-                    <p class="article__text"><%= article.introduction %></p>
-                    <% if (article.photo) { %>
-                        <picture>
-                            <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=avif"
-                                    type="image/avif">
-
-                            <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=webp"
-                                    type="image/webp">
+        <section class="sectionArticles" id="nieuws">
+<!--            <h1 id="nieuws">zie alle nieuwsartikelen</h1>-->
 
 
-                            <img src="<%= article.photo.URL %>?width=200&height=100&fit=cover" loading="lazy"
-                                 alt="Image of the house"
-                                 width="<%= article.photo.URL %>"
-                                 height=" <%= article.photo.URL %>" class="article__img">
-                        </picture>
-                    <% } %>
-                </article>
-            <% }) %>
+                <% firstTenArticles.forEach(article => { %>
+                    <article class="articles">
+                        <h2 class="article__title"><%= article.title %></h2>
+                        <p class="article__text"><%= article.introduction %></p>
+                        <% if (article.photo) { %>
+                            <picture>
+                                <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=avif"
+                                        type="image/avif">
+
+                                <source srcset="<%= article.photo.URL %>?width=400&height=300&fit=cover&format=webp"
+                                        type="image/webp">
+
+
+                                <img src="<%= article.photo.URL %>?width=200&height=100&fit=cover" loading="lazy"
+                                     alt="Image of the house"
+                                     width="<%= article.photo.URL %>"
+                                     height=" <%= article.photo.URL %>" class="article__img">
+                            </picture>
+                        <% } %>
+                    </article>
+                <% }) %>
 
         </section>
+        <div class="stylingButton">
+            <a
+                    class="bekijkmeerButton"
+                    href="">Alles bekijken
+            </a>
+        </div>
     </div>
 
 </main>
