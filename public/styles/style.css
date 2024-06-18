@@ -406,7 +406,8 @@ nav li a {
     grid-template-columns: 8em 4em 3em;
     grid-template-rows: auto auto;
     display: grid;
-    column-gap: 0.5em;
+    column-gap: 1.5em;
+    /*justify-content: center;*/
     /*border-bottom: .5px solid var(--gray-border);*/
 
 
@@ -800,7 +801,9 @@ label {
         height:auto;
     }
     .sectionArticles{
-        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+        /*grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));*/
+        grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+        /*max-width: 2263px;*/
     }
     .article__img{
         /*width: 70%;*/
