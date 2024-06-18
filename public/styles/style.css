@@ -52,6 +52,13 @@ li {
     list-style: none;
 
 }
+a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
 
 /*hier begint  de navigatie*/
 
@@ -649,6 +656,7 @@ label {
     justify-content: space-between;
     align-items: center;
     margin: 0.25rem;
+    border: 1px solid var(--gray-border);
 
 }
 
@@ -668,11 +676,22 @@ label {
 }
 
 .nieuws__link {
+    /*color: var(--color-black);*/
+    /*text-decoration: none;*/
+    /*padding: 0.4em;*/
+    /*border: solid var(--color-black) 3px;*/
+    /*background-color: white;*/
+    background-color: var(--white);
     color: var(--color-black);
+    border: 1px solid var(--gray-border);
     text-decoration: none;
-    padding: 0.4em;
-    border: solid var(--color-black) 3px;
-    background-color: white;
+    padding: .5rem .75rem;
+    font-weight: 700;
+    transition: background-color .2s ease-in-out;
+    outline-offset: 0;
+    font-size: 17px;
+
+
 }
 
 .nieuws__link:hover {
@@ -682,7 +701,7 @@ label {
 
 .sectionArticles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 2em));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2em;
 
 }
@@ -731,10 +750,14 @@ label {
 .article__img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
 }
 .stylingButton{
     text-align: center;
+    display: grid;
+    width: 11em;
+    margin: 0 auto;
+
     /*margin-top: 2em;*/
 }
 .bekijkmeerButton{
