@@ -364,6 +364,15 @@ nav li a {
     line-height: 1.5;
 }
 
+.linkToNiews{
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    font-weight: 600;
+
+}
+
+
 .intro {
     padding: 1rem;
     margin: 0 auto;
@@ -464,6 +473,7 @@ label {
 .playlist__inputRange {
     rotate: 359deg;
     accent-color: var(--yellow);
+    cursor:pointer;
 }
 
 .audio-hidden {
@@ -585,18 +595,29 @@ label {
     /*margin: 0 auto;*/
 }
 
+/*.nieuws {*/
+/*    background-color: var(--yellow);*/
+/*    !*todo toeveogen dat diagnaal *!*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    transition: color .5s linear;*/
+/*    !*background-color: var(--yellow) 50%, var(--white) 50%;*!*/
+/*    background-size: 100% 100%; !* Ensures colors fill the entire section *!*/
+/*    background-position: 0 0;*/
+
+
+/*}*/
+
 .nieuws {
     background-color: var(--yellow);
-    /*todo toeveogen dat diagnaal */
     position: relative;
     overflow: hidden;
     transition: color .5s linear;
-    /*background-color: var(--yellow) 50%, var(--white) 50%;*/
-    background-size: 100% 100%; /* Ensures colors fill the entire section */
-    background-position: 0 0;
-
-
+    background-image: linear-gradient(332deg, var(--white) 50%, var(--yellow) 50%);
+    /*background-size: 106% 200%;*/
+    background-position: 0 100%;
 }
+
 
 .nieuws__h1 {
     padding-left: 0.5em;
@@ -641,8 +662,8 @@ label {
 .nieuws__carousssel {
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    /*scroll-snap-type: x mandatory;*/
     white-space: nowrap;
     padding: 1rem;
     POSITION: RELATIVE;
@@ -896,6 +917,9 @@ label {
         column-gap: 1em;
     }
 
+    .nieuws__carousssel{
+        overflow: hidden;
+    }
 
 
     nav li a {
