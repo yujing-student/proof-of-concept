@@ -88,15 +88,15 @@ li {
     display: inline-flex;
 }
 
-.bnrLogo {
-    width: 31px;
-}
+/*.bnrLogo {*/
+/*    width: 31px;*/
+/*}*/
 
 
-#nav__submenu:target {
-    z-index: 1;
-    animation: slideIn .2s linear forwards;
-}
+/*#nav__submenu:target {*/
+/*    z-index: 1;*/
+/*    animation: slideIn .2s linear forwards;*/
+/*}*/
 
 
 @keyframes slideIn {
@@ -111,34 +111,34 @@ li {
     }
 }
 
-#nav__submenu {
+/*#nav__submenu {*/
 
-    transform: translateX(-124vh);
-    /*left: -100%;*/
-    overflow-y: scroll;
-    position: fixed;
-    top: 3.5rem;
-    width: 100%;
-    max-width: 200px;
-    box-shadow: 0 1px 4px rgba(31, 31, 31, .24);
-    margin-left: 5em;
-    background-color: var(--color-black);
+/*    transform: translateX(-124vh);*/
+/*    !*left: -100%;*!*/
+/*    overflow-y: scroll;*/
+/*    position: fixed;*/
+/*    top: 3.5rem;*/
+/*    width: 100%;*/
+/*    max-width: 200px;*/
+/*    box-shadow: 0 1px 4px rgba(31, 31, 31, .24);*/
+/*    margin-left: 5em;*/
+/*    background-color: var(--color-black);*/
 
 
-}
+/*}*/
 
-#nav__submenu.hidden {
-    display: none;
-}
+/*#nav__submenu.hidden {*/
+/*    display: none;*/
+/*}*/
 
-.nav__submenu__li {
-    height: 5em;
-    padding: 0em;
-    color: var(--white);
-    background-color: var(--color-black);
-    text-decoration: none;
+/*.nav__submenu__li {*/
+/*    height: 5em;*/
+/*    padding: 0em;*/
+/*    color: var(--white);*/
+/*    background-color: var(--color-black);*/
+/*    text-decoration: none;*/
 
-}
+/*}*/
 
 .button__nav {
     background-color: transparent;
@@ -262,32 +262,32 @@ li {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
-.navyellobackground {
-    position: absolute;
-    top: 11px;
-    left: 277px;
-    width: 16%;
-    height: 33%;
-    z-index: 8;
-    transition: background-color .5s linear;
+/*.navyellobackground {*/
+/*    position: absolute;*/
+/*    top: 11px;*/
+/*    left: 277px;*/
+/*    width: 16%;*/
+/*    height: 33%;*/
+/*    z-index: 8;*/
+/*    transition: background-color .5s linear;*/
 
-    /* Remove background color (optional): */
-    background-color: transparent; /* or your desired background color */
+/*    !* Remove background color (optional): *!*/
+/*    background-color: transparent; !* or your desired background color *!*/
 
 
-    /* Create the yellow half using :after */
+/*    !* Create the yellow half using :after *!*/
 
-    &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        background-color: var(--yellow);
-        rotate: 45deg;
-    }
-}
+/*    &:after {*/
+/*        content: "";*/
+/*        position: absolute;*/
+/*        top: 0;*/
+/*        right: 0;*/
+/*        width: 50%;*/
+/*        height: 100%;*/
+/*        background-color: var(--yellow);*/
+/*        rotate: 45deg;*/
+/*    }*/
+/*}*/
 
 
 #menu li {
@@ -348,7 +348,7 @@ main {
 }
 
 h1:nth-child(1),.NieuwsFilter__h1{
-    font-size: 2.3rem;
+    font-size:35px;
     margin-bottom: 0.5em;
     line-height: 1.5em;
 }
@@ -409,6 +409,10 @@ a:nth-child(2) {
     line-height: 1.5em;
 
 }
+.intro__p{
+    font-size: 21px;
+    line-height: 1.5;
+}
 
 div picture img:nth-child(2){
     width: 100%;
@@ -426,17 +430,6 @@ div picture img:nth-child(2){
     /*margin: 0 auto;*/
     display: grid;
 }
-
-/*div:nth-child(2) {*/
-/*    display: grid;*/
-/*    grid-template-columns: 1fr;*/
-/*    row-gap: 2em;*/
-/*    padding: 1rem;*/
-/*    grid-column: 1;*/
-/*    margin: 0 auto;*/
-/*    box-shadow: 0 0 300px 0 rgba(0,0,0,0.1);*/
-
-/*}*/
 
 .stylingplaylist{
     display: grid;
@@ -582,6 +575,7 @@ label {
 
 }
 
+/*hiermee groeit de animatie*/
 @keyframes grow {
     from {
         transform: scale(1);
@@ -664,20 +658,20 @@ label {
 
 }
 
-.niews__button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 35px;
-    max-width: 35px;
-    height: 36px;
-    box-sizing: border-box;
-    border: none;
-    transition: background-color .2s ease-in-out;
-    background-color: var(--color-black);
-    z-index: 5;
-}
+/*.niews__button {*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    min-width: 35px;*/
+/*    max-width: 35px;*/
+/*    height: 36px;*/
+/*    box-sizing: border-box;*/
+/*    border: none;*/
+/*    transition: background-color .2s ease-in-out;*/
+/*    background-color: var(--color-black);*/
+/*    z-index: 5;*/
+/*}*/
 
 .NieuwsFilter__link {
     /*color: var(--color-black);*/
@@ -839,11 +833,12 @@ label {
     }
 
     h1:nth-child(1),.NieuwsFilter__h1{
-        font-size: 2.5rem;
+        font-size: 37px;
     }
 
-    .intro ul p{
-        font-size: 1.5rem;
+    .intro__p{
+        font-size: 26px;
+        line-height: 1.5;
     }
     ul{
         list-style-type: disc;
@@ -886,6 +881,9 @@ label {
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 1em;
     }
+    #menuToggle {
+        display: none;
+    }
 
 
 }
@@ -916,9 +914,7 @@ label {
         justify-self: end;
     }
 
-    #menuToggle {
-        display: none;
-    }
+
     main{
         /*column-gap: 2em;*/
         display: grid;
