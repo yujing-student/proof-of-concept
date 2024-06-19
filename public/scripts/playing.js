@@ -4,6 +4,7 @@ const pausebutton = document.querySelector('.pauzebutton');
 const volumeInput = document.querySelector('.playlist__inputRange');
 
 volume()
+toggleBackToTop()
 playButton.addEventListener('click', togglePlayPause);
 
 // Check if Javascript is disabled
@@ -55,16 +56,25 @@ function volume() {
 
 // deze functie werkt niet het idee is dat het pijltje aan de zijkant pas zichtbaar is als je naar beneden scrollt
 function toggleBackToTop() {
-    const backToTop = document.querySelector(".backToTop");
-    const scrollPosition = window.scrollY;
-    //todo  hier kijken naar intersectie observer ipv windowsscrolly
-    const halfPage = document.documentElement.clientHeight / 2;
+    const backToTop = document.querySelector("main");
+    const pijl = document.querySelector(".backToTop");
+    const threshold = 0.5; // Show the element when 50% of it is visible
 
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                pijl.classList.add('visible');
+            } else {
+                pijl.classList.remove('visible');
+            }
+        });
+    }, {
+        root: null, // Observe the entire viewport
+        threshold: threshold, // Observe when 50% of the element is in view
+    });
 
-    if (scrollPosition >= halfPage) {
-        backToTop.classList.add("backToTop-open");
-        backToTop.classList.remove("backToTop");
-    }
+    observer.observe(backToTop);
 }
+
 
 

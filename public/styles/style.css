@@ -111,35 +111,6 @@ li {
     }
 }
 
-/*#nav__submenu {*/
-
-/*    transform: translateX(-124vh);*/
-/*    !*left: -100%;*!*/
-/*    overflow-y: scroll;*/
-/*    position: fixed;*/
-/*    top: 3.5rem;*/
-/*    width: 100%;*/
-/*    max-width: 200px;*/
-/*    box-shadow: 0 1px 4px rgba(31, 31, 31, .24);*/
-/*    margin-left: 5em;*/
-/*    background-color: var(--color-black);*/
-
-
-/*}*/
-
-/*#nav__submenu.hidden {*/
-/*    display: none;*/
-/*}*/
-
-/*.nav__submenu__li {*/
-/*    height: 5em;*/
-/*    padding: 0em;*/
-/*    color: var(--white);*/
-/*    background-color: var(--color-black);*/
-/*    text-decoration: none;*/
-
-/*}*/
-
 .button__nav {
     background-color: transparent;
     width: 40px;
@@ -262,34 +233,6 @@ li {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
-/*.navyellobackground {*/
-/*    position: absolute;*/
-/*    top: 11px;*/
-/*    left: 277px;*/
-/*    width: 16%;*/
-/*    height: 33%;*/
-/*    z-index: 8;*/
-/*    transition: background-color .5s linear;*/
-
-/*    !* Remove background color (optional): *!*/
-/*    background-color: transparent; !* or your desired background color *!*/
-
-
-/*    !* Create the yellow half using :after *!*/
-
-/*    &:after {*/
-/*        content: "";*/
-/*        position: absolute;*/
-/*        top: 0;*/
-/*        right: 0;*/
-/*        width: 50%;*/
-/*        height: 100%;*/
-/*        background-color: var(--yellow);*/
-/*        rotate: 45deg;*/
-/*    }*/
-/*}*/
-
-
 #menu li {
     padding: 10px 0;
     font-size: 22px;
@@ -309,6 +252,7 @@ nav li svg {
 nav li span {
     grid-column: 2;
     grid-row: 1;
+    margin-left: 0.3em;
 }
 
 /*
@@ -353,14 +297,6 @@ h1:nth-child(1),.NieuwsFilter__h1{
     line-height: 1.5em;
 }
 
-/*a:nth-child(2) {*/
-/*    font-size: 1.5rem;*/
-/*    margin-bottom: 0.5em;*/
-/*    line-height: 1.5;*/
-/*    font-weight: 600;*/
-/*    text-decoration: none;*/
-/*    color: var(--color-black);*/
-/*}*/
 
 .animationLink a {
     /*aanpassen positie en weghalen van de focus en de border*/
@@ -384,7 +320,7 @@ h1:nth-child(1),.NieuwsFilter__h1{
     background-color: var(--yellow);
     /*schaal de grootte*/
     scale: 0 1;
-    /*transform-origin: right center;*/
+    transform-origin: right center;
     transition: scale 0.3s;
 }
 
@@ -392,9 +328,8 @@ h1:nth-child(1),.NieuwsFilter__h1{
 
 .animationLink a:hover:after,
 .animationLink a:focus-visible:after {
-    /* JOUW CODE HIER */
     scale: 1 1;
-    transform-origin: left center;
+    transform-origin:  center;
 }
 
 .intro {
@@ -613,6 +548,20 @@ label {
     padding: 1rem;
     line-height: 0;
     bottom: 100px;
+
+
+}
+.visible {
+    position: fixed;
+    right: 1rem;
+    z-index: 99;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    line-height: 0;
+
+
 }
 
 /*einde van de plyalist*/
@@ -674,21 +623,6 @@ label {
     border: 1px solid var(--gray-border);
 
 }
-
-/*.niews__button {*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    min-width: 35px;*/
-/*    max-width: 35px;*/
-/*    height: 36px;*/
-/*    box-sizing: border-box;*/
-/*    border: none;*/
-/*    transition: background-color .2s ease-in-out;*/
-/*    background-color: var(--color-black);*/
-/*    z-index: 5;*/
-/*}*/
 
 .NieuwsFilter__link {
     /*color: var(--color-black);*/
@@ -832,15 +766,9 @@ label {
         height: auto;
 
     }
-    /*.sectionArticles{*/
-    /*    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));*/
-    /*}*/
-}
-@media (min-width: 770px) {
-
-
 
 }
+
 @media (min-width: 900px) {
 
     .intro__p_link,.intro__p_link a{
