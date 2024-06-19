@@ -5,7 +5,8 @@
 
 radio station BNR business beats om muziek te luisteren
 
-![img.png](img.png)
+<img width="646" alt="image" src="https://github.com/yujing-student/proof-of-concept/assets/100352887/5c08bddb-793d-4ff8-a6e3-920a2628456a">
+
 
 ## Inhoudsopgave
 
@@ -21,11 +22,14 @@ radio station BNR business beats om muziek te luisteren
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-![img.png](img.png)
+<img width="641" alt="image" src="https://github.com/yujing-student/proof-of-concept/assets/100352887/dbe29a15-708b-4ac8-b890-87d1c862f617">
+<img width="675" alt="image" src="https://github.com/yujing-student/proof-of-concept/assets/100352887/f62f3c28-8151-44d4-b0b0-1e80eae9d18d">
+
 
 In dit project heb ik een radio station gemaakt waar je muziek kan luisteren.
 Het is een radio station van BNR business beats. 
 Je kan de muziek aan en uit zetten en het volume aanpassen.
+Ook kan je nieuwsartikelen zien
 
 
 
@@ -64,8 +68,11 @@ en daarna doe je in de terminal
 npm  start
 ```
 
-vervolgens je dit in de terminal :
+vervolgens zie je dit in de terminal :
+<br>
+
 ![img_2.png](img_2.png)
+<br>
 en je drukt op de link en dan
 kan je de website openen in de browser.
 
