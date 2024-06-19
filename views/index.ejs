@@ -5,32 +5,20 @@
 
 <main class="">
 
-
-    <!--    hier nth child gebruiken-->
     <div class="">
-        <section class="intro">
-<!--            intro daar werkt nth child niet-->
+        <section class="intro"><!--            intro daar werkt nth child niet-->
             <h1 id="top">BNR business beats </h1>
-
-<!--            animation link is de gele onderin-->
-            <p class="animationLink intro__p"
-            >
-
-
+            <p class=" intro__p"><!--            animation link is de gele onderin-->
                 Blijf op de hoogte van het laatste nieuws terwijl je geniet van jouw favoriete muziek. Elk half uur een
                 nieuwsbulletin, en tussendoor non-stop muziek.
                 <br>
-                ga naar: <a href="#nieuws" class="">Nieuws</a>
 
             </p>
-
-            <!--        https://developer.mozilla.org/en-US/docs/Web/CSS/animation-->
-            <!--        todo kijken of image in div kan playlist kan-->
+            <p class="intro__p_link animationLink">
+                Ga naar: <a href="#nieuws" class="">Nieuws</a>
+            </p>
 
         </section>
-
-        <!--    todo dit lege blok nog stulen-->
-<!--        sylingplaylsit kan niet met nth child-->
         <div class="stylingplaylist">
             <picture>
                 <source srcset="assets/business.jpg?width=400&height=300&fit=cover&format=webp"
@@ -56,22 +44,17 @@
                               fill="#000000"></path>
                     </svg>
                 </button>
-
-                <!--            <label>-->
                 <form class="playlist__div">
-
-
                     <label>
                         <!--               todo  hier nog een form omheen zetten vanwege toegankelijkheid-->
-                        <input type="range" class="playlist__inputRange" name="volume" min="0" max="10" title="range tussen 0 en 10" placeholder=""/>
+                        <input type="range" class="playlist__inputRange" name="volume" min="0" max="10"
+                               title="range tussen 0 en 10" placeholder=""/>
                     </label>
                     <!--            </label>-->
                     <label for="volume" class="playlist__inputRange"></label>
                 </form>
 
-                <!--            <span class="pleasurable"></span>-->
 
-                <!--   todo     arialabel hoeft niet gewoon tekst erin zetten-->
                 <button class="playbutton grow " name="playlistbutton" role="button" id="playbuttonstart"
                         title="playlistbutton">
 
@@ -96,14 +79,14 @@
     <!--    hier nth child gebruiken-->
     <div class="NieuwsFilter">
         <section class="NieuwsFilter__section">
-            <h1 class="NieuwsFilter__h1">Nieuws</h1>
+            <h1 class="NieuwsFilter__h1" id="nieuws">Nieuws</h1>
 
             <ul class="NieuwsFilter__carousssel">
 
-                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link ">alles</a></li>
-                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">economie</a></li>
-                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">ondernemen&werk</a></li>
-                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">tech&innovatie</a></li>
+                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link ">Alles</a></li>
+                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">Economie</a></li>
+                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">Ondernemen&Werk</a></li>
+                <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">Tech&Innovatie</a></li>
                 <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">Mobiliteit</a></li>
                 <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">Column&opinie</a></li>
                 <li class="nieuws__filter__li"><a href="#nieuws" class="NieuwsFilter__link">Duurzaamheid</a></li>

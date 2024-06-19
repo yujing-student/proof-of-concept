@@ -352,14 +352,15 @@ h1:nth-child(1),.NieuwsFilter__h1{
     margin-bottom: 0.5em;
     line-height: 1.5em;
 }
-a:nth-child(2) {
-    font-size: 1.5rem;
-    margin-bottom: 0.5em;
-    line-height: 1.5;
-    font-weight: 600;
-    text-decoration: none;
-    color: var(--color-black);
-}
+
+/*a:nth-child(2) {*/
+/*    font-size: 1.5rem;*/
+/*    margin-bottom: 0.5em;*/
+/*    line-height: 1.5;*/
+/*    font-weight: 600;*/
+/*    text-decoration: none;*/
+/*    color: var(--color-black);*/
+/*}*/
 
 .animationLink a {
     /*aanpassen positie en weghalen van de focus en de border*/
@@ -412,6 +413,22 @@ a:nth-child(2) {
 .intro__p{
     font-size: 21px;
     line-height: 1.5;
+}
+.intro__p_link{
+    font-size: 22px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: var(--color-black);
+    margin-top: 2em;
+}
+.intro__p_link a {
+    font-size: 21px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: var(--color-black);
+    margin-top: 2em;
+    font-weight: 700;
+
 }
 
 div picture img:nth-child(2){
@@ -724,10 +741,12 @@ label {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
+    margin-bottom: 11px;
+
 
 
     font-size: 20px;
-    margin-bottom: 16px;
+    /*margin-bottom: 16px;*/
     line-height: 1.2;
 
 
@@ -824,6 +843,9 @@ label {
 }
 @media (min-width: 900px) {
 
+    .intro__p_link,.intro__p_link a{
+        font-size: 26px;
+    }
 
     div:nth-child(1) {
         display: grid;
@@ -837,7 +859,7 @@ label {
     }
 
     .intro__p{
-        font-size: 26px;
+        font-size: 24px;
         line-height: 1.5;
     }
     ul{
