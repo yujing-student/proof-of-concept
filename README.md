@@ -48,6 +48,31 @@ uit te zetten en het volume aan te passen.
 ook heb ik gelet op progressive enhancement en heb ik de website responsive gemaakt door mobile first te beginnen.
 
 
+dit is een snel overzichtmet de Kenmerken
+* sever-side rendering
+* `EJS`
+* `Node`
+* `Express`
+* `CSS`
+* `javascript`
+
+<h3>links naar documentatie</h3>
+
+<ul>
+<li><a href="https://ejs.co/">ejs documentatie</a></li>
+<li><a href="https://nodejs.org/">nodejs documentatie installeren is vereist</a></li>
+<li><a href="https://expressjs.com/">express documentatie</a></li>
+ <li><a href="https://code.visualstudio.com/">code editor visuel studio code</a></li>
+</ul>
+
+EJS (Embedded JavaScript Templates) is een template engine voor Node.js waarmee je dynamische HTML-pagina's kunt maken. Express.js is een framework voor webapplicaties in Node.js dat goed samenwerkt met EJS.
+
+Node.js is een open-source, cross-platform runtime-omgeving voor JavaScript. Het maakt het mogelijk om JavaScript-code uit te voeren buiten een webbrowser, waardoor je er servers, netwerktoepassingen en andere tools mee kunt bouwen.
+
+Express is een populair framework voor het bouwen van webapplicaties in Node.js. Het biedt een robuuste set functies om efficiënt en schaalbaar web- en mobiele backends te ontwikkelen.
+
+Visuel studiocode is de code editor die je kan gebruiken om dit project te gebruiken
+
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
