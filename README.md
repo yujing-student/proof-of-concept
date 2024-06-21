@@ -5,7 +5,8 @@
 
 radio station BNR business beats om muziek te luisteren
 
-![img.png](img.png)
+<img width="646" alt="image" src="https://github.com/yujing-student/proof-of-concept/assets/100352887/5c08bddb-793d-4ff8-a6e3-920a2628456a">
+
 
 ## Inhoudsopgave
 
@@ -21,11 +22,14 @@ radio station BNR business beats om muziek te luisteren
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-![img.png](img.png)
+<img width="641" alt="image" src="https://github.com/yujing-student/proof-of-concept/assets/100352887/dbe29a15-708b-4ac8-b890-87d1c862f617">
+<img width="675" alt="image" src="https://github.com/yujing-student/proof-of-concept/assets/100352887/f62f3c28-8151-44d4-b0b0-1e80eae9d18d">
+
 
 In dit project heb ik een radio station gemaakt waar je muziek kan luisteren.
 Het is een radio station van BNR business beats. 
 Je kan de muziek aan en uit zetten en het volume aanpassen.
+Ook kan je nieuwsartikelen zien
 
 
 
@@ -43,6 +47,31 @@ uit te zetten en het volume aan te passen.
 
 ook heb ik gelet op progressive enhancement en heb ik de website responsive gemaakt door mobile first te beginnen.
 
+
+dit is een snel overzichtmet de Kenmerken
+* sever-side rendering
+* `EJS`
+* `Node`
+* `Express`
+* `CSS`
+* `javascript`
+
+<h3>links naar documentatie</h3>
+
+<ul>
+<li><a href="https://ejs.co/">ejs documentatie</a></li>
+<li><a href="https://nodejs.org/">nodejs documentatie installeren is vereist</a></li>
+<li><a href="https://expressjs.com/">express documentatie</a></li>
+ <li><a href="https://code.visualstudio.com/">code editor visuel studio code</a></li>
+</ul>
+
+EJS (Embedded JavaScript Templates) is een template engine voor Node.js waarmee je dynamische HTML-pagina's kunt maken. Express.js is een framework voor webapplicaties in Node.js dat goed samenwerkt met EJS.
+
+Node.js is een open-source, cross-platform runtime-omgeving voor JavaScript. Het maakt het mogelijk om JavaScript-code uit te voeren buiten een webbrowser, waardoor je er servers, netwerktoepassingen en andere tools mee kunt bouwen.
+
+Express is een populair framework voor het bouwen van webapplicaties in Node.js. Het biedt een robuuste set functies om efficiënt en schaalbaar web- en mobiele backends te ontwikkelen.
+
+Visuel studiocode is de code editor die je kan gebruiken om dit project te gebruiken
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
@@ -64,8 +93,11 @@ en daarna doe je in de terminal
 npm  start
 ```
 
-vervolgens je dit in de terminal :
+vervolgens zie je dit in de terminal :
+<br>
+
 ![img_2.png](img_2.png)
+<br>
 en je drukt op de link en dan
 kan je de website openen in de browser.
 
